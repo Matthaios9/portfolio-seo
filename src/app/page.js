@@ -1,95 +1,75 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
+import { ModalProvider } from '@/context/modal-context'
+
+import Navbar from './sections/navbar/Navbar'
+import Header from './sections/header/Header';
+import About from './sections/about/About';
+import Services from './sections/services/Services';
+import Portfolio from './sections/portfolio/Portfolio';
+import Testimonials from './sections/testimonials/Testimonials';
+import FAQs from './sections/faqs/FAQs';
+import Contact from './sections/contact/Contact';
+import Footer from './sections/footer/Footer';
+import FloatingNav from './sections/floating-nav/FloatingNav';
+import Theme from '../theme/Theme';
+import { ThemeProvider, useThemeContext } from '../context/theme-context';
+import {useRef, useState, useEffect} from 'react'
+
 
 export default function Home() {
+  const {themeState} = useThemeContext();
+
+  const mainRef = useRef(null);
+  const [showFloatingNav, setShowFloatingNav] = useState(true);
+  const [siteYPostion, setSiteYPosition] = useState(0)
+
+  const showFloatingNavHandler = () => {
+    setShowFloatingNav(true);
+  }
+
+  const hideFloatingNavHandler = () => {
+    setShowFloatingNav(false);
+  }
+
+  // check if floating nav should be shown or hidden
+  const floatingNavToggleHandler = () => {
+    // check if we scrolled up or down at least 20px
+    if(siteYPostion < (mainRef?.current?.getBoundingClientRect().y - 20) || siteYPostion > (mainRef?.current?.getBoundingClientRect().y + 20)) {
+      showFloatingNavHandler();
+    } else {
+      hideFloatingNavHandler();
+    }
+
+    setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
+  }
+
+  useEffect(() => {
+    const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
+
+    // cleanup function
+    return () => clearInterval(checkYPosition);
+  }, [siteYPostion])
+
+  
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <ThemeProvider>
+    <ModalProvider>
+    <main className={`${themeState?.primary} ${themeState?.background}`} ref={mainRef}>
+      <Navbar/>
+      <Header/>
+      <About/>
+      <Services/>
+      <Portfolio/>
+      <Testimonials/>
+      <FAQs/>
+      <Contact />
+      <Footer/>
+      <Theme/>
+        {showFloatingNav && <FloatingNav/>}
     </main>
+    </ModalProvider>
+    </ThemeProvider>
   )
 }
