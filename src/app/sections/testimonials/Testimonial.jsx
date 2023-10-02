@@ -4,7 +4,7 @@ import styles from './testimonials.module.css'
 
 const Testimonial = ({testimonial}) => {
   return (
-    <Card className="light">
+    <Card className={styles.light}>
         <p>{testimonial.quote}</p>
         <div className={styles.testimonial__client}>
             <div className={styles.testimonial__client_avatar}>

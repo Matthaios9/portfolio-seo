@@ -13,18 +13,17 @@ import FAQs from './sections/faqs/FAQs';
 import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
 import FloatingNav from './sections/floating-nav/FloatingNav';
+import Modal from './components/Modal'
 import Theme from '../theme/Theme';
 import { ThemeProvider, useThemeContext } from '../context/theme-context';
 import {useRef, useState, useEffect} from 'react'
-
+import { useModalContext } from '@/context/modal-context'
 
 export default function Home() {
   const {themeState} = useThemeContext();
-
   const mainRef = useRef(null);
   const [showFloatingNav, setShowFloatingNav] = useState(true);
   const [siteYPostion, setSiteYPosition] = useState(0)
-
   const showFloatingNavHandler = () => {
     setShowFloatingNav(true);
   }
@@ -68,6 +67,7 @@ export default function Home() {
       <Footer/>
       <Theme/>
         {showFloatingNav && <FloatingNav/>}
+         <Modal/>
     </main>
     </ModalProvider>
     </ThemeProvider>

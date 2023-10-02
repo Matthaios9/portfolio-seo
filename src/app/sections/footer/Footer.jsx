@@ -1,6 +1,12 @@
 import {links, socials} from './data'
 import styles from './footer.module.css'
 
+/**
+ * Renders a footer section for a website.
+ *
+ * @returns {JSX.Element} The rendered footer section.
+ */
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>

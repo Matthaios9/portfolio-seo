@@ -35,3 +35,7 @@
 .swiper-pagination-bullet {
     background: var(--color-primary);
 }
+
+.light{
+    background: #f0eff0 !important;
+  }
