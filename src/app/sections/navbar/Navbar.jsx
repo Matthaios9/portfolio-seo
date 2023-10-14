@@ -27,7 +27,19 @@ const Navbar = () => {
           }
         </ul>
 
-        {status === 'unauthenticated' ? <Link href="/api/auth/signin">Login</Link> : (status === 'authenticated') ? <div style={{ color: '#fff' }}>{session.user.name}</div> : null}
+        {status === 'unauthenticated' ?
+          <Link style={{ color: '#fff' }} href="/api/auth/signin">Login</Link> : (status === 'authenticated')
+            ? <div style={{ color: '#fff' }}>
+
+              <div class="dropdown">
+                {session.user.name}
+                <div class="dropdown-content">
+                  <p>{session.user.email}</p>
+                  <Link href="/api/auth/signout">Logout</Link>
+                </div>
+              </div>
+            </div> : null
+        }
         <button id='theme__icon' onClick={showModalHandler}><IoIosColorPalette /></button>
       </div>
     </nav>

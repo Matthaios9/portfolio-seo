@@ -1,4 +1,8 @@
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
+
 import './globals.css'
+
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
@@ -20,8 +24,12 @@ export default function RootLayout({ children }) {
           new google.translate.TranslateElement("google_element");
         }`}
       </Script>
-      <body className={inter.className} id="google_element">
-        {children}
+      <body className={inter.className} >
+        <main id="google_element">
+          <Theme>
+            {children}
+          </Theme>
+        </main>
         <div id="overlays"></div>
       </body>
 
