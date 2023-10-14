@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,10 +12,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
-        
+
+      <Script sync src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate">
+      </Script>
+      <Script strategy='afterInteractive'>
+        {`function loadGoogleTranslate(){
+          new google.translate.TranslateElement("google_element");
+        }`}
+      </Script>
+      <body className={inter.className} id="google_element">
+        {children}
+        <div id="overlays"></div>
       </body>
-      <div id="overlays"></div>
+
     </html>
   )
 }

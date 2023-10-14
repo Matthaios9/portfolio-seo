@@ -1,14 +1,20 @@
 'use client'
 
 import Image from 'next/image'
-import data from './data'
-import {IoIosColorPalette} from 'react-icons/io'
+import navData from './data'
+import { IoIosColorPalette } from 'react-icons/io'
 import { useModalContext } from '../../../context/modal-context'
 import './navbar.css'
+import { useSession } from 'next-auth/react'
+import Link from 'next/link'
+
+
 
 const Navbar = () => {
-  const {showModalHandler} = useModalContext();
+  const { showModalHandler } = useModalContext();
+  const { status, data: session } = useSession();
 
+  if (status === 'loading') return null;
   return (
     <nav>
       <div className="container nav__container">
@@ -17,10 +23,12 @@ const Navbar = () => {
         </a>
         <ul className='nav__menu'>
           {
-            data.map(item => <li key={item.id}><a href={item.link}>{item.title}</a></li>)
+            navData.map(item => <li key={item.id}><a href={item.link}>{item.title}</a></li>)
           }
         </ul>
-        <button id='theme__icon' onClick={showModalHandler}><IoIosColorPalette/></button>
+
+        {status === 'unauthenticated' ? <Link href="/api/auth/signin">Login</Link> : (status === 'authenticated') ? <div style={{ color: '#fff' }}>{session.user.name}</div> : null}
+        <button id='theme__icon' onClick={showModalHandler}><IoIosColorPalette /></button>
       </div>
     </nav>
   )
