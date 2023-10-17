@@ -26,9 +26,5 @@
     "react-scrollspy": "^3.4.3",
     "swiper": "^8.4.4",
     "zod": "^3.22.2"
-  },
-  "devDependencies": {
-    "@types/node": "20.8.2",
-    "@types/react": "18.2.25"
   }
 }

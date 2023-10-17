@@ -33,7 +33,7 @@ const About = () => {
                         }
                     </div>
                     <p>
-                        I am a seasoned full-stack developer, armed with a degree in Computer Science and a relentless passion for crafting innovative digital solutions. With a heart full of curiosity and a mind wired for innovation, I am driven by the magic that happens when Java and JavaScript converge. With more than 3 years of experience, I've honed my skills to create seamless, user-centric applications that merge functionality with aesthetics. From crafting robust backend systems with Java to conjuring interactive frontends using JavaScript, I'm on a perpetual journey to innovate and elevate.
+                        I am a seasoned full-stack developer, armed with a degree in Computer Science and a relentless passion for crafting innovative digital solutions. With a heart full of curiosity and a mind wired for innovation, I am driven by the magic that happens when Java and JavaScript converge. With more than 3 years of experience, I&apos;ve honed my skills to create seamless, user-centric applications that merge functionality with aesthetics. From crafting robust backend systems with Java to conjuring interactive frontends using JavaScript, I&apos;m on a perpetual journey to innovate and elevate.
                     </p>
                     {status === "authenticated" ? (
                         // <Link className='btn primary' href="/resume">Request for CV </Link>
