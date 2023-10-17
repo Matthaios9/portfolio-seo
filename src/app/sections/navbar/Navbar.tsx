@@ -31,9 +31,9 @@ const Navbar = () => {
           <Link style={{ color: '#fff' }} href="/api/auth/signin">Login</Link> : (status === 'authenticated')
             ? <div style={{ color: '#fff' }}>
 
-              <div class="dropdown">
+              <div className="dropdown">
                 {session.user.name}
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                   <p>{session.user.email}</p>
                   <Link href="/api/auth/signout">Logout</Link>
                 </div>

@@ -3,14 +3,29 @@ import { createContext, useContext, useReducer, useEffect } from "react"
 import themeReducer from "./themeReducer";
 
 
-export const ThemeContext = createContext('');
+export interface ThemeType {
+    primary: string;
+    background: string;
+}
+
+export interface userducerAction {
+    type: ThemeType;
+    payload: ThemeType;
+}
+export interface ThemeContextType {
+    action: ThemeType[];
+    action: ThemeType[];
+}
+
+
+export const ThemeContext = createContext<ThemeType>({ primary: "", background: "" });
 let initialThemeState = { primary: 'color-1', background: 'bg-1' };
 // get theme settings from local storage, or use default theme
 if (typeof window !== 'undefined') {
     initialThemeState = JSON.parse(localStorage.getItem('themeSettings')) || { primary: 'color-1', background: 'bg-1' }
 }
 export const ThemeProvider = ({ children }) => {
-    const [themeState, dispatchTheme] = useReducer(themeReducer, initialThemeState);
+    const [themeState, dispatchTheme] = useReducer<userducerAction>(themeReducer, initialThemeState);
 
     const themeHandler = (buttonClassName) => {
         dispatchTheme({ type: buttonClassName })
@@ -22,7 +37,7 @@ export const ThemeProvider = ({ children }) => {
     }, [themeState.primary, themeState.background])
 
 
-    return <ThemeContext.Provider value={{ themeState, themeHandler }}>{children}</ThemeContext.Provider>
+    return <ThemeContext.Provider value={ { themeState, themeHandler } }> { children } < /ThemeContext.Provider>
 }
 
 
