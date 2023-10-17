@@ -17,7 +17,7 @@ import Theme from '../theme/Theme';
 import { ThemeProvider, useThemeContext } from '../context/theme-context';
 
 import AuthProvider from './auth/Provider'
-
+import { Toaster } from 'react-hot-toast';
 const App = () => {
     const { themeState } = useThemeContext();
     const mainRef = useRef(null);
@@ -69,6 +69,7 @@ const App = () => {
                 <Footer />
                 <Theme />
                 {showFloatingNav && <FloatingNav />}
+                <Toaster />
                 <Modal />
             </main>
         </AuthProvider>

@@ -6,7 +6,8 @@ import data from './data'
 import Card from '../../components/Card'
 import styles from './about.module.css'
 import { useSession } from 'next-auth/react'
-
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 const About = () => {
     const { status, data: session } = useSession();
     return (
@@ -17,6 +18,7 @@ const About = () => {
                         <Image src={'/assets/museum.JPG'} alt="About Image" width="200" height='400' />
                     </div>
                 </div>
+
                 <div className={styles.about__right}>
                     <h2>About Me</h2>
                     <div className={styles.about__cards}>
@@ -50,6 +52,8 @@ const About = () => {
 
 
 const DialogBox = ({ name, email }) => {
+
+
     return (
         <Dialog.Root>
             <Dialog.Trigger>
@@ -89,11 +93,25 @@ const DialogBox = ({ name, email }) => {
                             Cancel
                         </Button>
                     </Dialog.Close>
-                    <Dialog.Close>
+                    <Dialog.Close
+                        onClick={async () => {
+                            try {
+                                const res = await axios.post('/api/resume', { resume_requested: "YES" })
+                                if (res.status === "200")
+                                    toast.success(res.data)
+
+                            } catch (e) {
+                                const message = e.response.data.error ? e.response.data.error : "request failed, Try again later"
+                                toast.error(message)
+                                console.log(e.response.data.error)
+                            }
+                        }}
+                    >
                         <Button>Save</Button>
                     </Dialog.Close>
                 </Flex>
             </Dialog.Content>
+
         </Dialog.Root>
     )
 }
