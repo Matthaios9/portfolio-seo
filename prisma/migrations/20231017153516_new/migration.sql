@@ -34,6 +34,8 @@ CREATE TABLE `User` (
     `name` VARCHAR(191) NULL,
     `email` VARCHAR(191) NULL,
     `emailVerified` DATETIME(3) NULL,
+    `hasedPassword` VARCHAR(191) NULL,
+    `isAdmin` BOOLEAN NOT NULL DEFAULT false,
     `image` VARCHAR(191) NULL,
     `resume_requested` ENUM('NO', 'YES', 'APROVED', 'DENIED') NOT NULL DEFAULT 'NO',
 
