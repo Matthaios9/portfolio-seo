@@ -25,6 +25,13 @@ export default function RootLayout({ children }) {
           new google.translate.TranslateElement("google_element");
         }`}
       </Script>
+      <Script async id="ggoleAnalytics" src="https://www.googletagmanager.com/gtag/js?id=G-Z08KQJ4YH6"></Script>
+      <Script id="anayalyticsScript">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-Z08KQJ4YH6');`}
+      </Script>
       <body className={inter.className} >
         <main id="google_element">
           <Theme>
