@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      <Script id="googleScript" sync src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate">
+      <Script id="googleScript" sync src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate">
       </Script>
       <Script strategy='afterInteractive' id="googleTranslate">
         {`function loadGoogleTranslate(){
