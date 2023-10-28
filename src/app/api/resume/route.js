@@ -6,10 +6,11 @@ import prisma from '../../../../prisma/client';
 
 export async function POST(request) {
     const session = await getServerSession(authOptions)
+    const resBody = await request.json
     if (!session)
         return NextResponse.json({}, { status: 401 });
     const user = await prisma.User.findUnique({
-        where: { email: "r3ddy03@gmail.com" }
+        where: { id: "r3ddy03@gmail.com" }
     })
 
     if (user.resume_requested === "YES")
@@ -29,3 +30,5 @@ export async function POST(request) {
         return NextResponse.json({ "success": true, message: "Resume request sent successfully" })
 
 }
+
+

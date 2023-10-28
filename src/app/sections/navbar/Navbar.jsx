@@ -13,7 +13,7 @@ import Link from 'next/link'
 const Navbar = () => {
   const { showModalHandler } = useModalContext();
   const { status, data: session } = useSession();
-
+  console.log(session)
   if (status === 'loading') return null;
   return (
     <nav>
@@ -35,6 +35,7 @@ const Navbar = () => {
                 {session.user.name}
                 <div class="dropdown-content">
                   <p>{session.user.email}</p>
+
                   <Link href="/api/auth/signout">Logout</Link>
                 </div>
               </div>
