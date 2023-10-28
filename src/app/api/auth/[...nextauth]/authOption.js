@@ -8,6 +8,24 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 const authOptions = {
     adapter: PrismaAdapter(prisma),
+    callbacks: {
+        async jwt({ token, user }) {
+            //   ADMIN,LEADER , OFFICER
+            if (user) {
+                user.role = ((user?.isAdmin == 0) || (user?.isAdmin == null)) ? 'user' : 'admin';
+                token.user = user
+            }
+            return token
+        },
+        async session({
+            session,
+            token,
+            user,
+        }) {
+            session.user = token.user;
+            return session;
+        },
+    },
     providers: [
         // CredentialsProvider({
         //     name: 'Credential',

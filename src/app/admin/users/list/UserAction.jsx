@@ -11,6 +11,7 @@ const OfficerActions = () => {
 
     return (
         <Flex justify="between" mt="5">
+            <Link href="/" className='text-purple-600 underline'>Home</Link>
             <UsersFilter />
         </Flex>
     );
