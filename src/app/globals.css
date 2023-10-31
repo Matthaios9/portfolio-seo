@@ -592,7 +592,24 @@ img {
   display: flex;
   flex-direction: column;
 }
-
+.goog-te-gadget{
+  position: fixed;
+  top: 0;
+  right: 100px;
+}
+.goog-te-gadget select{
+  height: 30px;
+  background-color: var(--color-primary);
+  color: #fff;
+}
 .goog-te-gadget img {
   width: 50px !important;
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .goog-te-gadget{
+  
+    top: 80px;
+    right: 30px;
+  }
 }
