@@ -596,6 +596,13 @@ img {
   position: fixed;
   top: 0;
   right: 100px;
+  color:rgba(0, 0, 0, 0.062) !important;
+}
+iframe{
+  display: none;
+}
+.goog-te-gadget  > span{
+  display: none;
 }
 .goog-te-gadget select{
   height: 30px;
@@ -603,13 +610,12 @@ img {
   color: #fff;
 }
 .goog-te-gadget img {
-  width: 50px !important;
+  width: 50px !important; 
   display: none;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) {
   .goog-te-gadget{
-  
     top: 80px;
-    right: 30px;
+    right: 100px;
   }
 }
