@@ -46,7 +46,7 @@ const authOptions = {
         // }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOLEE_CLIENT_SECRET
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET
         })
     ],
     session: {

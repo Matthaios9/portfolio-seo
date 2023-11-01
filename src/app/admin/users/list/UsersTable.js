@@ -39,11 +39,6 @@ const UserTable = ({ searchParams, User }) => {
                             )}
                         </Table.ColumnHeaderCell>
                     ))}
-                    {session !== null ? (
-                        <TableColumnHeaderCell>
-                            Actions
-                        </TableColumnHeaderCell>
-                    ) : null}
                 </Table.Row>
             </Table.Header>
             <Table.Body>
@@ -63,10 +58,6 @@ const UserTable = ({ searchParams, User }) => {
                         </Table.Cell>
                         <Table.Cell className="hidden md:table-cell">
                             <UserStatusBage status={user.resume_requested} />
-                        </Table.Cell>
-
-                        <Table.Cell className="hidden md:table-cell">
-                            <Link href={`/admin/users/edit/${user.id}`}>Edit</Link>
                         </Table.Cell>
                     </Table.Row>
                 ))}
