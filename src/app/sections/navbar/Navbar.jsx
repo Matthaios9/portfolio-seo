@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div class="dropdown-content">
                   <p>{session.user.email}</p>
                   {(session.user.role !== null && session.user.role === "admin") ? (
-                    <Link href="/admin/users/list">My Users</Link>
+                    <Link href="/admin">Dashboard</Link>
                   ) : null}
                   <Link href="/api/auth/signout">Logout</Link>
                 </div>
