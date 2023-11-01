@@ -12,7 +12,7 @@ import { PrismaClient } from '@prisma/client'
 
 const About = () => {
     const { status, data: session } = useSession();
-    
+   
     return (
         <section id="about" data-aos="fade-in">
             <div className={`container ${styles?.about__container}`}>
