@@ -44,6 +44,6 @@ export default async function Home() {
 export const dynamic = 'force-dynamic'; 
 
 export const metadata = {
-  title: 'Mattheos Tasios - Dashboard',
+  title: 'Dashboard',
   description: 'User Analytics'
 };
