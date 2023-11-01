@@ -61,6 +61,6 @@ model VerificationToken {
 enum ResumeRequestStatus {
   NO
   YES
-  APROVED
+  APPROVED
   DENIED
 }
