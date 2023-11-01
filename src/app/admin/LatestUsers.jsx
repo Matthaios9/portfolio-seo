@@ -1,36 +1,33 @@
-import prisma from '@/prisma/client';
+import prisma from '../../../prisma/client';
 import { Avatar, Card, Flex, Heading, Table } from '@radix-ui/themes';
 import React from 'react';
-import { IssueStatusBadge } from './components';
+import UserStatusBage from './users/_components/UserStatusBage';
 import Link from 'next/link';
 
-const LatestIssues = async () => {
-  const issues = await prisma.issue.findMany({
+const LatestUsers = async () => {
+  const users = await prisma.user.findMany({
     orderBy: { createdAt: 'desc' },
-    take: 5,
-    include: {
-      assignedToUser: true,
-    },
+    take: 5
   });
 
   return (
     <Card>
-      <Heading size="4" mb="5">Latest Issues</Heading>
+      <Heading size="4" mb="5">Latest users</Heading>
       <Table.Root>
         <Table.Body>
-          {issues.map((issue) => (
-            <Table.Row key={issue.id}>
+          {users.map((user) => (
+            <Table.Row key={user.id}>
               <Table.Cell>
                 <Flex justify="between">
                   <Flex direction="column" align="start" gap="2">
-                    <Link href={`/issues/${issue.id}`}>
-                      {issue.title}
+                    <Link href={`/users/${user.id}`}>
+                      {user.title}
                     </Link>
-                    <IssueStatusBadge status={issue.status} />
+                    <UserStatusBage status={user?.resume_requested} />
                   </Flex>
-                  {issue.assignedToUser && (
+                  {user?.image && (
                     <Avatar
-                      src={issue.assignedToUser.image!}
+                      src={user?.image}
                       fallback="?"
                       size="2"
                       radius="full"
@@ -46,4 +43,4 @@ const LatestIssues = async () => {
   );
 };
 
-export default LatestIssues;
+export default LatestUsers;

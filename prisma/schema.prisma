@@ -48,6 +48,7 @@ model User {
   resume_requested ResumeRequestStatus @default(NO)
   accounts         Account[]
   sessions         Session[]
+  createdAt        DateTime            @default(now())
 }
 
 model VerificationToken {

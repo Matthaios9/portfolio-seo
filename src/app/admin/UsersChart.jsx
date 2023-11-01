@@ -10,11 +10,12 @@ import {
 } from 'recharts';
 import React from 'react';
 
-const IssueChart = ({ open, inProgress, closed }) => {
+const IssueChart = ({ NO, YES,APPROVED, DENIED }) => {
   const data = [
-    { label: 'Open', value: open },
-    { label: 'In Progress', value: inProgress },
-    { label: 'Closed', value: closed },
+    { label: 'NO', value: NO },
+    { label: 'YES', value: YES },
+    { label: 'Approved', value: APPROVED },
+    { label: 'Denied', value: DENIED },
   ];
 
   return (

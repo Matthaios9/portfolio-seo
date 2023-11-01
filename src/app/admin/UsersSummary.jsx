@@ -4,15 +4,16 @@ import Link from 'next/link';
 import React from 'react';
 
 
-const IssueSummary = ({ open, inProgress, closed } ) => {
+const IssueSummary = ({ NO,YES, APPROVED, DENIED } ) => {
   const containers = [
-    { label: 'Open Issues', value: open, status: 'OPEN' },
+    { label: 'Resume YES ', value: YES, status: 'YES' },
     {
-      label: 'In-progress Issues',
-      value: inProgress,
-      status: 'IN_PROGRESS',
+      label: 'Resume NO',
+      value: NO,
+      status: 'NO',
     },
-    { label: 'Closed Issues', value: closed, status: 'CLOSED' },
+    { label: 'Resume Approved', value: APPROVED, status: 'APPROVED' },
+    { label: 'Resume Denied', value: DENIED, status: 'DENIED' },
   ];
 
   return (

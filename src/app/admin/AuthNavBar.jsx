@@ -1,6 +1,6 @@
 "use client";
 
-import Skeleton from "../../components/Skeleton";
+import Skeleton from "../components/Skeleton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
