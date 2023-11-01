@@ -18,9 +18,9 @@ export async function POST(request) {
       })
    
     if (user.resume_requested === "YES")
-        return NextResponse.json({ error: "Resume request already sent", }, { status: 401 });
+        return NextResponse.json({ error: "Resume request already sent", }, { status: 200 });
     if (user.resume_requested === "APPROVED")
-        return NextResponse.json({ error: "Resume request already aproved" }, { status: 401 });
+        return NextResponse.json({ error: "Resume request already aproved" }, { status: 200 });
     const resume_requested = {
         resume_requested: 'YES'
     }
