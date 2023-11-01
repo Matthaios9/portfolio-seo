@@ -8,11 +8,14 @@ import styles from './about.module.css'
 import { useSession } from 'next-auth/react'
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
+import { PrismaClient } from '@prisma/client'
+
 const About = () => {
     const { status, data: session } = useSession();
+    
     return (
         <section id="about" data-aos="fade-in">
-            <div className={`container ${styles.about__container}`}>
+            <div className={`container ${styles?.about__container}`}>
                 <div className={styles.about__left}>
                     <div className={styles.about__portrait}>
                         <Image src={'/assets/museum.JPG'} alt="About Image" width="200" height='400' />
@@ -35,15 +38,18 @@ const About = () => {
                     <p>
                         I am a seasoned full-stack developer, armed with a degree in Computer Science and a relentless passion for crafting innovative digital solutions. With a heart full of curiosity and a mind wired for innovation, I am driven by the magic that happens when Java and JavaScript converge. With more than 3 years of experience, I&apos;ve honed my skills to create seamless, user-centric applications that merge functionality with aesthetics. From crafting robust backend systems with Java to conjuring interactive frontends using JavaScript, I&apos;m on a perpetual journey to innovate and elevate.
                     </p>
-                    {status === "authenticated" ? (
+                     {status === "authenticated" && session?.user?.resume_requested === "APPROVED" ? 
+                    <a href={'/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf'} download className='btn primary'>Download CV <HiDownload/></a>
+                    :status === "authenticated" && session?.user.resume_requested !== "APPROVED" ? (
                         // <Link className='btn primary' href="/resume">Request for CV </Link>
                         <DialogBox name={session.user.name} email={session.user.email} />
+                      
                     ) : <Link className='btn primary' href="/api/auth/signin">
                         Sign in Download
                     </Link>}
 
 
-                    {/* <a href={'/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf'} download className='btn primary'>Download CV <HiDownload/></a> */}
+                   
                 </div>
             </div>
         </section>
