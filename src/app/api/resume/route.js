@@ -8,7 +8,7 @@ export async function POST(request) {
     const session = await getServerSession(authOptions)
     const prisma = new PrismaClient()
     const resBody = await request.json()
-    // console.log("db ", process.env.DATABASE_URL)
+    
     if (!session)
         return NextResponse.json({}, { status: 401 });
     const user = await prisma.user.findUnique({
@@ -18,7 +18,7 @@ export async function POST(request) {
       })
    
     if (user.resume_requested === "YES")
-        return NextResponse.json({ error: "Resume request already sent",  db : process.env.DATABASE_URL }, { status: 401 });
+        return NextResponse.json({ error: "Resume request already sent", }, { status: 401 });
     if (user.resume_requested === "APPROVED")
         return NextResponse.json({ error: "Resume request already aproved" }, { status: 401 });
     const resume_requested = {
@@ -31,7 +31,7 @@ export async function POST(request) {
         data: resume_requested
     })
     if (requestResume)
-        return NextResponse.json({ "success": true, message: "Resume request sent successfully",  db : process.env.DATABASE_URL})
+        return NextResponse.json({ "success": true, message: "Resume request sent successfully", })
 
 }
 
