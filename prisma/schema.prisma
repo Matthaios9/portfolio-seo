@@ -48,6 +48,7 @@ model User {
   resume_requested ResumeRequestStatus @default(NO)
   accounts         Account[]
   sessions         Session[]
+  posts            BlogPost[]
   createdAt        DateTime            @default(now())
 }
 
@@ -64,4 +65,13 @@ enum ResumeRequestStatus {
   YES
   APPROVED
   DENIED
+}
+
+model BlogPost {
+  id     String  @id @default(cuid())
+  title  String  @db.VarChar(255)
+  body   String  @db.Text()
+  slug   String? @db.VarChar(255)
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id])
 }
