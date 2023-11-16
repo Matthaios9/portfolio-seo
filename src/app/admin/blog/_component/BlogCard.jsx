@@ -1,15 +1,5 @@
 "use client";
-import { Pencil1Icon } from "@radix-ui/react-icons";
-import {
-  Card,
-  Text,
-  Inset,
-  Dialog,
-  Button,
-  Flex,
-  TextField,
-} from "@radix-ui/themes";
-import DOMPurify from "dompurify";
+import { Card, Text, Inset, Dialog, Button, Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import DeletePostButton from "./DeleteBlogButton";
 import { CldImage } from "next-cloudinary";
