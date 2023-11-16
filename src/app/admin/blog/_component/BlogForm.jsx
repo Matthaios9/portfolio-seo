@@ -11,12 +11,15 @@ import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Spinner from "../../../components/Spinner";
+import { CldImage } from "next-cloudinary";
+import UploadImage from "../../../components/UploadImage";
 
 const BlogFOrm = ({ blogPost }) => {
   const {
     register,
     control,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(blogSchema),
@@ -24,6 +27,7 @@ const BlogFOrm = ({ blogPost }) => {
   const router = useRouter();
 
   const [isSubmitting, setSubmitting] = useState(false);
+  const [publicId, setPublicId] = useState("");
 
   const addBlogPost = async (data) => {
     setSubmitting(true);
@@ -73,6 +77,7 @@ const BlogFOrm = ({ blogPost }) => {
               />
             </TextField.Root>
           </Box>
+
           <Box>
             <Controller
               name="body"
@@ -83,6 +88,24 @@ const BlogFOrm = ({ blogPost }) => {
               )}
             />
           </Box>
+          <Box py="5">
+            <UploadImage
+              setPublicId={(id) => {
+                setPublicId(id);
+                setValue("imageId", id);
+                console.log("image id", id);
+              }}
+            />
+          </Box>
+          {publicId}
+          {publicId && (
+            <CldImage
+              src={publicId}
+              width={270}
+              height={180}
+              alt="A coffee image"
+            />
+          )}
           <Box py="5">
             <Button type="submit" disabled={isSubmitting}>
               {blogPost ? "Update Post" : "Submit New Post"}{" "}

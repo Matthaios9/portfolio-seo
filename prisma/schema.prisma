@@ -68,10 +68,11 @@ enum ResumeRequestStatus {
 }
 
 model BlogPost {
-  id     String  @id @default(cuid())
-  title  String  @db.VarChar(255)
-  body   String  @db.Text()
-  slug   String? @db.VarChar(255)
-  userId String?
-  user   User?   @relation(fields: [userId], references: [id])
+  id      String  @id @default(cuid())
+  title   String  @db.VarChar(255)
+  body    String  @db.Text()
+  slug    String? @db.VarChar(255)
+  imageId String? @db.VarChar(255)
+  userId  String?
+  user    User?   @relation(fields: [userId], references: [id])
 }

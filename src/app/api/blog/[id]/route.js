@@ -17,7 +17,7 @@ export async function PATCH(request, { params }) {
       status: 400,
     });
 
-  const { title, body } = bodyData;
+  const { title, body, imageId } = bodyData;
 
   //   if (id) {
   //     const user = await prisma.user.findUnique({
@@ -39,6 +39,7 @@ export async function PATCH(request, { params }) {
     data: {
       title,
       body,
+      imageId,
     },
   });
 
