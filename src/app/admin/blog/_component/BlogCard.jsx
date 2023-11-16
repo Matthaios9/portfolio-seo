@@ -62,11 +62,8 @@ const BlogCard = ({ id, title, body }) => {
           <Flex gap="3" mt="4" justify="end">
             <Dialog.Close>
               <Button variant="soft" color="gray">
-                Cancel
+                Close
               </Button>
-            </Dialog.Close>
-            <Dialog.Close>
-              <Button>Save</Button>
             </Dialog.Close>
           </Flex>
         </Dialog.Content>
