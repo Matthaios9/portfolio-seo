@@ -44,10 +44,15 @@ const BlogCard = ({ id, title, body }) => {
         </Dialog.Trigger>
 
         <Dialog.Content style={{ maxWidth: "xl" }}>
-          <Flex direction="column">
-            <Link href={`/admin/blog/edit/${id}`}>Edit</Link>
-            <Dialog.Title>{title} </Dialog.Title>
+          <Flex direction="column" align="end">
+            <Link
+              href={`/admin/blog/edit/${id}`}
+              className="bg-blue-400 p-1 rounded text-white"
+            >
+              Edit
+            </Link>
           </Flex>
+          <Dialog.Title>{title} </Dialog.Title>
 
           <span
             dangerouslySetInnerHTML={{ __html: body }}
