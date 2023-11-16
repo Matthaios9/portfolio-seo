@@ -1,5 +1,5 @@
 import React from "react";
-import prisma from "@/prisma/client";
+import { PrismaClient } from "@prisma/client";
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 import BlogFormSkeleton from "./loading";
@@ -10,13 +10,15 @@ const BlogForm = dynamic(() => import("../../_component/BlogForm"), {
 });
 
 const EditIssuePage = async ({ params }) => {
-  const issue = await prisma.issue.findUnique({
-    where: { id: parseInt(params.id) },
+  const prisma = new PrismaClient();
+  const blogPost = await prisma.blogPost.findUnique({
+    where: {
+      id: params.id,
+    },
   });
+  if (!blogPost) notFound();
 
-  if (!issue) notFound();
-
-  return <BlogForm issue={issue} />;
+  return <BlogForm blogPost={blogPost} />;
 };
 
 export default EditIssuePage;

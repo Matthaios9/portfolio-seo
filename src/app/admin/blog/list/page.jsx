@@ -12,7 +12,7 @@ const page = async () => {
         <Grid columns="3" align="center" gap="3" width="auto">
           {blogs.map((item) => (
             <Box style={{}}>
-              <BlogCard title={item.title} body={item.body} />
+              <BlogCard title={item.title} body={item.body} id={item.id} />
             </Box>
           ))}
         </Grid>

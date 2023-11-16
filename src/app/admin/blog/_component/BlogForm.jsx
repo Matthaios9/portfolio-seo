@@ -10,6 +10,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Spinner from "../../../components/Spinner";
 
 const BlogFOrm = ({ blogPost }) => {
   const {
@@ -26,20 +27,37 @@ const BlogFOrm = ({ blogPost }) => {
 
   const addBlogPost = async (data) => {
     setSubmitting(true);
-    await axios
-      .post("/api/blog", data)
-      .then((res) => {
-        console.log("response", res);
-        toast.success("post added");
-        setSubmitting(false);
-        router.push("/admin/blog/list");
-        router.refresh();
-      })
-      .catch((err) => {
-        setSubmitting(false);
-        toast.error("somthing went wront");
-        console.log(err);
-      });
+    if (blogPost) {
+      await axios
+        .patch("/api/blog/" + blogPost.id, data)
+        .then((res) => {
+          console.log("response", res);
+          toast.success("post added");
+          setSubmitting(false);
+          router.push("/admin/blog/list");
+          router.refresh();
+        })
+        .catch((err) => {
+          setSubmitting(false);
+          toast.error("somthing went wront");
+          console.log(err);
+        });
+    } else {
+      await axios
+        .post("/api/blog", data)
+        .then((res) => {
+          console.log("response", res);
+          toast.success("post added");
+          setSubmitting(false);
+          router.push("/admin/blog/list");
+          router.refresh();
+        })
+        .catch((err) => {
+          setSubmitting(false);
+          toast.error("somthing went wront");
+          console.log(err);
+        });
+    }
   };
   return (
     <>
@@ -48,14 +66,18 @@ const BlogFOrm = ({ blogPost }) => {
           <Box mb="3">
             <Text>Title</Text>
             <TextField.Root>
-              <TextField.Input placeholder="Title" {...register("title")} />
+              <TextField.Input
+                placeholder="Title"
+                defaultValue={blogPost.title}
+                {...register("title")}
+              />
             </TextField.Root>
           </Box>
           <Box>
             <Controller
               name="body"
               control={control}
-              defaultValue={""}
+              defaultValue={blogPost?.body}
               render={({ field }) => (
                 <ReactQuill placeholder="Body" {...field} />
               )}
@@ -63,7 +85,8 @@ const BlogFOrm = ({ blogPost }) => {
           </Box>
           <Box py="5">
             <Button type="submit" disabled={isSubmitting}>
-              Post
+              {blogPost ? "Update Post" : "Submit New Post"}{" "}
+              {isSubmitting && <Spinner />}
             </Button>
           </Box>
         </form>
