@@ -9,8 +9,13 @@ import {
   Flex,
   TextField,
 } from "@radix-ui/themes";
+import DOMPurify from "dompurify";
 
 const BlogCard = ({ title, body }) => {
+  const sanitizedData = () => ({
+    __html: DOMPurify.sanitize(body),
+  });
+
   return (
     <>
       <Dialog.Root>
@@ -34,21 +39,22 @@ const BlogCard = ({ title, body }) => {
                 {title}
               </Text>
             </Flex>
-            <div
-              as="p"
+            <span
               size="3"
-              dangerouslySetInnerHTML={{ __html: body.substring(0, 20) }}
-            ></div>
+              dangerouslySetInnerHTML={{
+                __html: body.substring(0, 20),
+              }}
+            ></span>
           </Card>
         </Dialog.Trigger>
 
         <Dialog.Content style={{ maxWidth: "xl" }}>
           <Dialog.Title>{title}</Dialog.Title>
 
-          <div
+          <span
             dangerouslySetInnerHTML={{ __html: body }}
             className="p-5 mb-5"
-          ></div>
+          ></span>
 
           <Flex gap="3" mt="4" justify="end">
             <Dialog.Close>

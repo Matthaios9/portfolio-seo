@@ -11,7 +11,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const BlogFOrm = () => {
+const BlogFOrm = ({ blogPost }) => {
   const {
     register,
     control,
@@ -32,7 +32,7 @@ const BlogFOrm = () => {
         console.log("response", res);
         toast.success("post added");
         setSubmitting(false);
-        router.push("/admin");
+        router.push("/admin/blog/list");
         router.refresh();
       })
       .catch((err) => {
