@@ -97,7 +97,7 @@ const BlogFOrm = ({ blogPost }) => {
               }}
             />
           </Box>
-          {publicId}
+
           {publicId && (
             <CldImage
               src={publicId}
