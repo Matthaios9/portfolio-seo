@@ -11,12 +11,9 @@ import {
 } from "@radix-ui/themes";
 import DOMPurify from "dompurify";
 import Link from "next/link";
+import DeletePostButton from "./DeleteBlogButton";
 
 const BlogCard = ({ id, title, body }) => {
-  const sanitizedData = () => ({
-    __html: DOMPurify.sanitize(body),
-  });
-
   return (
     <>
       <Dialog.Root>
@@ -51,6 +48,7 @@ const BlogCard = ({ id, title, body }) => {
             >
               Edit
             </Link>
+            <DeletePostButton blogId={id} />
           </Flex>
           <Dialog.Title>{title} </Dialog.Title>
 

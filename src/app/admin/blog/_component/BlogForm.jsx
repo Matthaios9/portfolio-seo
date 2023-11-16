@@ -68,7 +68,7 @@ const BlogFOrm = ({ blogPost }) => {
             <TextField.Root>
               <TextField.Input
                 placeholder="Title"
-                defaultValue={blogPost.title}
+                defaultValue={blogPost?.title}
                 {...register("title")}
               />
             </TextField.Root>

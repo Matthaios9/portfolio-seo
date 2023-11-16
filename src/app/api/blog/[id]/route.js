@@ -44,3 +44,21 @@ export async function PATCH(request, { params }) {
 
   return NextResponse.json(updatedIssue);
 }
+
+export async function DELETE(request, { params }) {
+  const session = await getServerSession(authOptions);
+  if (!session) return NextResponse.json({}, { status: 401 });
+
+  const blogPost = await prisma.blogPost.findUnique({
+    where: { id: params.id },
+  });
+
+  if (!blogPost)
+    return NextResponse.json({ error: "Invalid Blog post" }, { status: 404 });
+
+  await prisma.blogPost.delete({
+    where: { id: blogPost.id },
+  });
+
+  return NextResponse.json({});
+}

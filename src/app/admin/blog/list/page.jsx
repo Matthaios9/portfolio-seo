@@ -11,7 +11,7 @@ const page = async () => {
         <BlogActions />
         <Grid columns="3" align="center" gap="3" width="auto">
           {blogs.map((item) => (
-            <Box style={{}}>
+            <Box style={{}} key={item.id}>
               <BlogCard title={item.title} body={item.body} id={item.id} />
             </Box>
           ))}
