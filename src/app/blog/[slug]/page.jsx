@@ -2,6 +2,16 @@ import { PrismaClient } from "@prisma/client";
 import { Card, Inset, Text, Strong, Container } from "@radix-ui/themes";
 import BlogImage from "../_components/BlogImage";
 
+import { cache } from "react";
+
+const fetchUser = cache((slug) =>
+  prisma.blogPost.findFirst({
+    where: {
+      slug: slug,
+    },
+  })
+);
+
 const BlugPostDetails = async ({ params }) => {
   const prisma = new PrismaClient();
   const blogs = await prisma.blogPost.findFirst({
@@ -9,8 +19,6 @@ const BlugPostDetails = async ({ params }) => {
       slug: params.slug,
     },
   });
-
-  console.log("post", blogs);
   return (
     <Container my="5" className="h-full">
       <Card size="2" className="mt-5">
@@ -28,7 +36,7 @@ const BlugPostDetails = async ({ params }) => {
           {blogs.createdAt.toDateString()}
         </Text>
         <div
-          className="mt-5 mx-5"
+          className="mt-5 mx-5 blog-body-text"
           dangerouslySetInnerHTML={{ __html: blogs.body }}
         ></div>
       </Card>
@@ -37,3 +45,11 @@ const BlugPostDetails = async ({ params }) => {
 };
 
 export default BlugPostDetails;
+
+export async function generateMetadata({ params }) {
+  const blogPost = await fetchUser(params.slug);
+  return {
+    title: blogPost?.metaTitle,
+    description: blogPost.metaDescription,
+  };
+}

@@ -41,6 +41,7 @@ const BlogCard = ({ id, title, body, image, time, slug }) => {
             <Text
               as="p"
               size="3"
+              className="text-area"
               style={{ color: "white !important" }}
               dangerouslySetInnerHTML={createMarkup()}
             ></Text>

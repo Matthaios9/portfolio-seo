@@ -12,7 +12,7 @@ const AdminLayout = ({ children }) => {
     <AuthProvider>
       <Theme appearance="dark" color="white">
         <BlogNavbar />
-        <Container className="mt-5 pt-5 w-full" size="4">
+        <Container className="mt-5 pt-5 w-full h-full" size="4">
           {children}
         </Container>
       </Theme>

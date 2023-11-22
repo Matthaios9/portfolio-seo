@@ -88,6 +88,28 @@ const BlogFOrm = ({ blogPost }) => {
               )}
             />
           </Box>
+          <Box mb="3">
+            <Text>Meta Title</Text>
+            <TextField.Root>
+              <TextField.Input
+                placeholder="Meat Title"
+                defaultValue={blogPost?.metaTitile}
+                {...register("metaTitle")}
+              />
+            </TextField.Root>
+          </Box>
+
+          <Box>
+            <Text>Meta Decription</Text>
+            <Controller
+              name="metaDescription"
+              control={control}
+              defaultValue={blogPost?.metaDescription}
+              render={({ field }) => (
+                <ReactQuill placeholder="Meta Decription" {...field} />
+              )}
+            />
+          </Box>
           <Box py="5">
             <UploadImage
               setPublicId={(id) => {
