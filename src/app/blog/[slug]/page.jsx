@@ -12,7 +12,7 @@ const BlugPostDetails = async ({ params }) => {
 
   console.log("post", blogs);
   return (
-    <Container my="5" className="h-screen">
+    <Container my="5" className="h-full">
       <Card size="2" className="mt-5">
         <Inset clip="padding-box" side="top" pb="current">
           <BlogImage
