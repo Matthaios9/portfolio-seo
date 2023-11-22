@@ -41,6 +41,7 @@ const NavLinks = () => {
     { label: "Dashboard", href: "/admin" },
     { label: "Home Page", href: "/" },
     { label: "Users", href: "/admin/users/list" },
+    { label: "Blogs", href: "/admin/blog/list" },
   ];
 
   return (
