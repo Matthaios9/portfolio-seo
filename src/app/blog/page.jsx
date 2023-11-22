@@ -17,6 +17,7 @@ const BlogPage = async () => {
               id={item.id}
               image={item.imageId}
               time={item.createdAt}
+              slug={item.slug}
             />
           </Box>
         ))}
