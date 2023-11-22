@@ -9,6 +9,7 @@ import "./header.css";
 const Header = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
+    // updated header
   }, []);
 
   return (
