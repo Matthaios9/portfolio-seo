@@ -23,7 +23,7 @@ const AuthNavBar = () => {
   return (
     <nav>
       <div className="container nav__container">
-        <a href="index.html" className="nav__logo">
+        <a href="/" className="nav__logo">
           <Image
             src={"/assets/img_nav.png"}
             width="40"

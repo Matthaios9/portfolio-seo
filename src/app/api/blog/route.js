@@ -11,11 +11,13 @@ export async function POST(request) {
   if (!validation.success)
     return NextResponse.json(validation.error.errors, { status: 400 });
 
-  const { title, body, imageId } = bodyRes;
+  const { title, body, imageId, metaTitle, metaDescription } = bodyRes;
   const slug = slugify(title);
   const newPost = await prisma.blogPost.create({
     data: {
       title,
+      metaTitle,
+      metaDescription,
       body,
       slug,
       imageId,

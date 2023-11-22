@@ -50,12 +50,14 @@ const BlogCard = ({ id, slug, title, body, image }) => {
             </Link>
             <DeletePostButton blogId={id} />
           </Flex>
-          <Dialog.Title>{title} </Dialog.Title>
+          <Dialog.Title style={{ color: "black !important" }}>
+            {title}{" "}
+          </Dialog.Title>
 
-          <span
+          <div
             dangerouslySetInnerHTML={{ __html: body }}
-            className="p-5 mb-5"
-          ></span>
+            className={`p-5 mb-5 `}
+          ></div>
 
           <Flex gap="3" mt="4" justify="end">
             <Dialog.Close>
