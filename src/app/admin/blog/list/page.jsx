@@ -5,7 +5,11 @@ import BlogActions from "./BlogAction";
 
 const page = async () => {
   const prisma = new PrismaClient();
-  const blogs = await prisma.blogPost.findMany();
+  const blogs = await prisma.blogPost.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
   return (
     <div>
       <Container>
@@ -16,6 +20,7 @@ const page = async () => {
               <BlogCard
                 title={item.title}
                 body={item.body}
+                slug={item.slug}
                 id={item.id}
                 image={item.imageId}
               />

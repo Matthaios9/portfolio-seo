@@ -1,11 +1,15 @@
 "use client";
 import { Card, Text, Inset, Dialog, Button, Flex } from "@radix-ui/themes";
 import { CldImage } from "next-cloudinary";
+import "./FrontBlogCard.css";
 
-const BlogCard = ({ id, title, body, image }) => {
+const BlogCard = ({ id, title, body, image, time }) => {
+  function createMarkup() {
+    return { __html: body.substring(0, 150) };
+  }
   return (
     <>
-      <Card size="4" my="3" style={{ maxWidth: 440 }}>
+      <Card size="4" my="3" style={{ maxWidth: 440 }} className="text-white">
         <Inset clip="padding-box" side="top" pb="current">
           {!image ? (
             <img
@@ -28,10 +32,16 @@ const BlogCard = ({ id, title, body, image }) => {
             />
           )}
         </Inset>
-        <Flex justify="between">
-          <Text as="div" size="2" weight="bold">
+        <Flex direction="column" justify="between">
+          <Text as="p" size="3" weight="bold" className="uppercase">
             {title}
           </Text>
+          <Text
+            as="p"
+            size="3"
+            style={{ color: "white !important" }}
+            dangerouslySetInnerHTML={createMarkup()}
+          ></Text>
         </Flex>
       </Card>
     </>

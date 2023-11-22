@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import { blogSchema } from "../../../validationSchema/validationSchema";
 import { z } from "zod";
-
+import { slugify } from "../../../utill/slug";
 export async function POST(request) {
   const bodyRes = await request.json();
   const prisma = new PrismaClient();
@@ -12,11 +12,12 @@ export async function POST(request) {
     return NextResponse.json(validation.error.errors, { status: 400 });
 
   const { title, body, imageId } = bodyRes;
-
+  const slug = slugify(title);
   const newPost = await prisma.blogPost.create({
     data: {
       title,
       body,
+      slug,
       imageId,
     },
   });

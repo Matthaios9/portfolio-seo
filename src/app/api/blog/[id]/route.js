@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { patchBlogShema } from "../../../../validationSchema/validationSchema";
 import { z } from "zod";
-
+import { slugify } from "../../../../utill/slug";
 export async function PATCH(request, { params }) {
   const prisma = new PrismaClient();
   const session = await getServerSession(authOptions);
@@ -33,12 +33,13 @@ export async function PATCH(request, { params }) {
 
   if (!blogPost)
     return NextResponse.json({ error: "Invalid issue" }, { status: 404 });
-
+  const slug = slugify(title);
   const updatedIssue = await prisma.blogPost.update({
     where: { id: blogPost.id },
     data: {
       title,
       body,
+      slug,
       imageId,
     },
   });

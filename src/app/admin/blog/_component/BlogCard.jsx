@@ -4,7 +4,7 @@ import Link from "next/link";
 import DeletePostButton from "./DeleteBlogButton";
 import { CldImage } from "next-cloudinary";
 
-const BlogCard = ({ id, title, body, image }) => {
+const BlogCard = ({ id, slug, title, body, image }) => {
   return (
     <>
       <Dialog.Root>
