@@ -3,6 +3,8 @@ import { Card, Text, Inset, Dialog, Button, Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import DeletePostButton from "./DeleteBlogButton";
 import { CldImage } from "next-cloudinary";
+import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 const BlogCard = ({ id, slug, title, body, image }) => {
   return (
@@ -12,7 +14,7 @@ const BlogCard = ({ id, slug, title, body, image }) => {
           <Card size="2" style={{ maxWidth: 240 }}>
             <Inset clip="padding-box" side="top" pb="current">
               {!image ? (
-                <img
+                <Image
                   src={process.env.IMAGE_PLACE_HOLDER}
                   alt="Bold typography"
                   style={{
@@ -54,10 +56,9 @@ const BlogCard = ({ id, slug, title, body, image }) => {
             {title}{" "}
           </Dialog.Title>
 
-          <div
-            dangerouslySetInnerHTML={{ __html: body }}
-            className={`p-5 mb-5 `}
-          ></div>
+          <div className={`p-5 mb-5 `}>
+            <ReactMarkdown>{body}</ReactMarkdown>
+          </div>
 
           <Flex gap="3" mt="4" justify="end">
             <Dialog.Close>

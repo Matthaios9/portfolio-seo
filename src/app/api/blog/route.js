@@ -28,6 +28,5 @@ export async function POST(request) {
       { error: "Somthing is went wrong" },
       { status: 400 }
     );
-  console.log("post", newPost);
   return NextResponse.json(newPost);
 }

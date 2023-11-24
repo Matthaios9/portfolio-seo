@@ -1,7 +1,4 @@
 "use client";
-import React, { ReactNode } from "react";
-
-import Link from "next/link";
 import AuthProvider from "../auth/Provider";
 import { Theme, Container } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";

@@ -1,6 +1,11 @@
-import BlogForm from "../_component/BlogForm";
+import dynamic from "next/dynamic";
+import BlogFormSkeleton from "../_component/BlogFormSkeleton";
+const BlogForm = dynamic(() => import("../_component/BlogForm"), {
+  ssr: false,
+  loading: () => <BlogFormSkeleton />,
+});
 
-const NewBlogPostPage = () => {
+const BlogNewPage = () => {
   return (
     <div>
       <BlogForm />
@@ -8,4 +13,4 @@ const NewBlogPostPage = () => {
   );
 };
 
-export default NewBlogPostPage;
+export default BlogNewPage;

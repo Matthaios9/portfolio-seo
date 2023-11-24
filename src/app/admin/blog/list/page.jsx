@@ -3,7 +3,7 @@ import BlogCard from "../_component/BlogCard";
 import { PrismaClient } from "@prisma/client";
 import BlogActions from "./BlogAction";
 
-const page = async () => {
+const ListBlogPage = async () => {
   const prisma = new PrismaClient();
   const blogs = await prisma.blogPost.findMany({
     orderBy: {
@@ -32,4 +32,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default ListBlogPage;

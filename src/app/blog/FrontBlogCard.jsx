@@ -1,20 +1,19 @@
 "use client";
-import { Card, Text, Inset, Dialog, Button, Flex } from "@radix-ui/themes";
+import { Card, Text, Inset, Flex } from "@radix-ui/themes";
 import { CldImage } from "next-cloudinary";
 import "./FrontBlogCard.css";
 import Link from "next/link";
+import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 const BlogCard = ({ id, title, body, image, time, slug }) => {
-  function createMarkup() {
-    return { __html: body.substring(0, 150) };
-  }
   return (
     <>
       <Link href={`/blog/${slug}`}>
         <Card size="4" my="3" style={{ maxWidth: 440 }} className="text-white">
           <Inset clip="padding-box" side="top" pb="current">
             {!image ? (
-              <img
+              <Image
                 src={process.env.IMAGE_PLACE_HOLDER}
                 alt="Bold typography"
                 style={{
@@ -38,13 +37,9 @@ const BlogCard = ({ id, title, body, image, time, slug }) => {
             <Text as="p" size="3" weight="bold" className="uppercase">
               {title}
             </Text>
-            <Text
-              as="p"
-              size="3"
-              className="text-area"
-              style={{ color: "white !important" }}
-              dangerouslySetInnerHTML={createMarkup()}
-            ></Text>
+            <div className="text-area" style={{ color: "white !important" }}>
+              <ReactMarkdown>{body}</ReactMarkdown>
+            </div>
           </Flex>
         </Card>
       </Link>

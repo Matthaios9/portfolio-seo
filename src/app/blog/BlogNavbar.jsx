@@ -1,25 +1,15 @@
 "use client";
 
-import Skeleton from "../components/Skeleton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { BiSolidDashboard } from "react-icons/bi";
 import classnames from "classnames";
 import { useSession } from "next-auth/react";
 import "./navcss.css";
-import {
-  Avatar,
-  Box,
-  Container,
-  DropdownMenu,
-  Flex,
-  Text,
-} from "@radix-ui/themes";
-import navData from "../sections/navbar/data";
 
 import Image from "next/image";
 const AuthNavBar = () => {
+  const { status, data: session } = useSession();
   return (
     <nav>
       <div className="container nav__container">

@@ -16,10 +16,10 @@ const Header = () => {
     <header id="header">
       <div className="container header__container">
         <div className="header__profile" data-aos="fade-in">
-          <img
+          <Image
             src={"/assets/cv_picture.jpg"}
             width="200"
-            height={"auto"}
+            height="150"
             alt="Header Portait"
           />
         </div>

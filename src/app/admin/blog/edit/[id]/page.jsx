@@ -9,7 +9,7 @@ const BlogForm = dynamic(() => import("../../_component/BlogForm"), {
   loading: () => <BlogFormSkeleton />,
 });
 
-const EditIssuePage = async ({ params }) => {
+const EditBlogPage = async ({ params }) => {
   const prisma = new PrismaClient();
   const blogPost = await prisma.blogPost.findUnique({
     where: {
@@ -21,4 +21,4 @@ const EditIssuePage = async ({ params }) => {
   return <BlogForm blogPost={blogPost} />;
 };
 
-export default EditIssuePage;
+export default EditBlogPage;

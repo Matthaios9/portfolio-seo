@@ -1,10 +1,9 @@
 "use client";
 import { Box, Button, Container, Text, TextField } from "@radix-ui/themes";
 import { Controller, useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import SimpleMDE from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
 import { blogSchema } from "../../../../validationSchema/validationSchema";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
@@ -84,7 +83,7 @@ const BlogFOrm = ({ blogPost }) => {
               control={control}
               defaultValue={blogPost?.body}
               render={({ field }) => (
-                <ReactQuill placeholder="Body" {...field} />
+                <SimpleMDE placeholder="Body" {...field} />
               )}
             />
           </Box>
@@ -106,7 +105,7 @@ const BlogFOrm = ({ blogPost }) => {
               control={control}
               defaultValue={blogPost?.metaDescription}
               render={({ field }) => (
-                <ReactQuill placeholder="Meta Decription" {...field} />
+                <SimpleMDE placeholder="Meta Decription" {...field} />
               )}
             />
           </Box>
