@@ -7,9 +7,9 @@ import BlogNavbar from "./BlogNavbar";
 const AdminLayout = ({ children }) => {
   return (
     <AuthProvider>
-      <Theme appearance="dark" color="white">
+      <Theme>
         <BlogNavbar />
-        <Container className="mt-5 pt-5 w-full h-full" size="4">
+        <Container className="mt-5 pt-5 w-full" size="4">
           {children}
         </Container>
       </Theme>

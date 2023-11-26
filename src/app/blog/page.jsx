@@ -8,7 +8,7 @@ const BlogPage = async () => {
   const blogs = await prisma.blogPost.findMany();
   return (
     <Container my="5" className="h-full">
-      <Grid columns="2" align="center" gap="3" width="auto">
+      <Grid columns="1" align="center" gap="3" width="auto">
         {blogs.map((item) => (
           <Box style={{}} key={item.id}>
             <FrontBlogCard

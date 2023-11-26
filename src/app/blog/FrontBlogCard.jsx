@@ -10,16 +10,16 @@ const BlogCard = ({ id, title, body, image, time, slug }) => {
   return (
     <>
       <Link href={`/blog/${slug}`}>
-        <Card size="4" my="3" style={{ maxWidth: 440 }} className="text-white">
-          <Inset clip="padding-box" side="top" pb="current">
+        <Card size="2" my="3" className="text-white">
+          <Flex direction="row">
             {!image ? (
               <Image
                 src={process.env.IMAGE_PLACE_HOLDER}
                 alt="Bold typography"
                 style={{
                   display: "block",
-                  objectFit: "cover",
-                  width: "100%",
+                  objectFit: "contain",
+                  width: 200,
                   height: 140,
                   backgroundColor: "var(--gray-5)",
                 }}
@@ -29,17 +29,22 @@ const BlogCard = ({ id, title, body, image, time, slug }) => {
                 src={image}
                 width={270}
                 height={180}
+                sizes="100vw"
                 alt="A coffee image"
+                className="object-cover"
               />
             )}
-          </Inset>
-          <Flex direction="column" justify="between">
-            <Text as="p" size="3" weight="bold" className="uppercase">
-              {title}
-            </Text>
-            <div className="text-area" style={{ color: "white !important" }}>
-              <ReactMarkdown>{body}</ReactMarkdown>
-            </div>
+
+            <Flex direction="column" justify="start" className="pl-5">
+              <Text as="p" size="3" weight="bold" className="uppercase">
+                {title}
+              </Text>
+              <div
+                className="text-area"
+                dangerouslySetInnerHTML={{ __html: body.substring(0, 400) }}
+                style={{ color: "white !important" }}
+              ></div>
+            </Flex>
           </Flex>
         </Card>
       </Link>

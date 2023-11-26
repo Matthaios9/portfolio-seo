@@ -8,9 +8,10 @@ const BlogImage = ({ imageId, height, width, alt, className }) => {
       width={width}
       height={height}
       alt={alt}
+      className={className}
       style={{
         display: "block",
-        objectFit: "cover",
+        objectFit: "contain",
         width: "100%",
         backgroundColor: "var(--gray-5)",
       }}

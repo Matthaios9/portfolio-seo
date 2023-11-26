@@ -1,7 +1,10 @@
-/* .text-area > span, h1, h2, h3, h4, h5 h6, p {
-    color: white !important;
-} */
-
-
-
-
+.text-area > span,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+p {
+  color: #555 !important;
+}

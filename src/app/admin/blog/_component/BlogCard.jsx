@@ -56,9 +56,10 @@ const BlogCard = ({ id, slug, title, body, image }) => {
             {title}{" "}
           </Dialog.Title>
 
-          <div className={`p-5 mb-5 `}>
-            <ReactMarkdown>{body}</ReactMarkdown>
-          </div>
+          <div
+            className={`p-5 mb-5 `}
+            dangerouslySetInnerHTML={{ __html: body }}
+          ></div>
 
           <Flex gap="3" mt="4" justify="end">
             <Dialog.Close>
