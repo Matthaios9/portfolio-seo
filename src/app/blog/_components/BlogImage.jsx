@@ -8,6 +8,8 @@ const BlogImage = ({ imageId, height, width, alt, className }) => {
       width={width}
       height={height}
       alt={alt}
+      crop="thumb"
+      sizes="50vw"
       className={className}
       style={{
         display: "block",

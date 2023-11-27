@@ -10,7 +10,7 @@ const BlogCard = ({ id, title, body, image, time, slug }) => {
   return (
     <>
       <Link href={`/blog/${slug}`}>
-        <Card size="2" my="3" className="text-white">
+        <Card size="2" my="3" className="text-white max-h-52">
           <Flex direction="row">
             {!image ? (
               <Image
@@ -18,7 +18,7 @@ const BlogCard = ({ id, title, body, image, time, slug }) => {
                 alt="Bold typography"
                 style={{
                   display: "block",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   width: 200,
                   height: 140,
                   backgroundColor: "var(--gray-5)",
@@ -28,8 +28,10 @@ const BlogCard = ({ id, title, body, image, time, slug }) => {
               <CldImage
                 src={image}
                 width={270}
-                height={180}
-                sizes="100vw"
+                height={100}
+                sizes="60vw"
+                crop="thumb"
+                gravity="faces"
                 alt="A coffee image"
                 className="object-cover"
               />

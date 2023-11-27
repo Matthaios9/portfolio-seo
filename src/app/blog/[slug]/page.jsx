@@ -23,12 +23,12 @@ const BlugPostDetails = async ({ params }) => {
     <Container my="8" className="h-full pt-8">
       <h1
         as="h1"
-        className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left"
+        className="text-6xl text-black md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left"
       >
         {blogs.title}
       </h1>
       <article className="mt-5">
-        <Text className="text-gray-300 text-center">
+        <Text className="text-black text-center">
           Posted on {blogs.createdAt.toDateString()}
         </Text>
         <BlogImage
@@ -39,7 +39,7 @@ const BlugPostDetails = async ({ params }) => {
           className={"bg-cover"}
         />
 
-        <div className="mt-5 mx-5 blog-body-text text-white">
+        <div className="mt-5 mx-8 px-8 blog-body-text text-white">
           {parse(blogs.body)}
         </div>
       </article>
