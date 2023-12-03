@@ -32,3 +32,23 @@ export const projectSchema = z.object({
     .optional(),
   imageId: z.string().min(1, "Image is required").max(255).optional(),
 });
+
+export const patchProjectShema = z.object({
+  title: z.string().min(1, "Title is required").max(255).optional(),
+  description: z
+    .string()
+    .min(1, "Description is required")
+    .max(65535)
+    .optional(),
+  projectLink: z
+    .string()
+    .trim()
+    .url({ message: "Project link must be url" })
+    .optional(),
+  githubLink: z
+    .string()
+    .trim()
+    .url({ message: "Github link must be url" })
+    .optional(),
+  imageId: z.string().min(1, "Image is required").max(255).optional(),
+});

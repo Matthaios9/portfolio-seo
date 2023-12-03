@@ -11,6 +11,7 @@ import {
 import { useRouter } from "next/navigation";
 import ErrorMessage from "../../../components/ErrorMessage";
 import UploadImage from "../../../components/UploadImage";
+import Spinner from "../../../components/Spinner";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -43,7 +44,7 @@ const ProjectForm = ({ projectData }) => {
           console.log("response", res);
           toast.success("post added");
           setSubmitting(false);
-          router.push("/admin/blog/list");
+          router.push("/admin/projects/list");
           router.refresh();
         })
         .catch((err) => {
@@ -58,8 +59,8 @@ const ProjectForm = ({ projectData }) => {
           console.log("response", res);
           toast.success("post added");
           setSubmitting(false);
-          // router.push("/admin/blog/list");
-          // router.refresh();
+          router.push("/admin/projects/list");
+          router.refresh();
         })
         .catch((err) => {
           setSubmitting(false);
@@ -75,7 +76,11 @@ const ProjectForm = ({ projectData }) => {
         <Box>
           <Text>Title</Text>
           <TextField.Root>
-            <TextField.Input placeholder="Title" {...register("title")} />
+            <TextField.Input
+              placeholder="Title"
+              {...register("title")}
+              defaultValue={projectData?.title}
+            />
           </TextField.Root>
         </Box>
         <Box className="pt-5">
@@ -83,6 +88,7 @@ const ProjectForm = ({ projectData }) => {
           <TextArea
             placeholder="Project Decription"
             {...register("description")}
+            defaultValue={projectData?.description}
           />
           <ErrorMessage>{errors?.description?.message}</ErrorMessage>
         </Box>
@@ -92,6 +98,7 @@ const ProjectForm = ({ projectData }) => {
             <TextField.Input
               placeholder="Project Website Link"
               {...register("projectLink")}
+              defaultValue={projectData?.projectLink}
             />
           </TextField.Root>
           <ErrorMessage>{errors?.projectLink?.message}</ErrorMessage>
@@ -102,6 +109,7 @@ const ProjectForm = ({ projectData }) => {
             <TextField.Input
               placeholder="Github Link"
               {...register("githubLink")}
+              defaultValue={projectData?.githubLink}
             />
           </TextField.Root>
           <ErrorMessage>{errors?.githubLink?.message}</ErrorMessage>
@@ -116,9 +124,9 @@ const ProjectForm = ({ projectData }) => {
           />
         </Box>
 
-        {publicId && (
+        {(publicId || projectData) && (
           <CldImage
-            src={publicId}
+            src={!publicId && projectData ? projectData.imageId : publicId}
             width={270}
             height={180}
             alt="A coffee image"
@@ -126,7 +134,8 @@ const ProjectForm = ({ projectData }) => {
         )}
         <Box className="pt-5">
           <Button type="submit" disabled={isSubmitting}>
-            Add new Project
+            {projectData ? "Update Post" : "Submit New Post"}{" "}
+            {isSubmitting && <Spinner />}
           </Button>
         </Box>
       </form>
