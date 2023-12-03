@@ -1,6 +1,15 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import { projectSchema } from "../../../validationSchema/validationSchema";
+
+export async function GET(request) {
+  // return NextResponse.json(params);
+  const prisma = new PrismaClient();
+  const project = await prisma.project.findMany();
+  if (!project) return NextResponse.json({}, { status: 401 });
+  return NextResponse.json(project, { status: 200 });
+}
+
 export async function POST(request) {
   const bodyRes = await request.json();
   const prisma = new PrismaClient();
