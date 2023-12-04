@@ -11,7 +11,7 @@ import Script from "next/script";
 export const metadata = {
   title: "Mattheos Tasios| Freelancer",
   description:
-    "I build top Web application in REact js,React Native, JavaScript and Java",
+    "I build top Web application in React js,React Native, JavaScript and Java",
 };
 
 export default function RootLayout({ children }) {

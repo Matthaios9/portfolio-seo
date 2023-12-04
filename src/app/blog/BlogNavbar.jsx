@@ -30,9 +30,9 @@ const AuthNavBar = () => {
           </Link>
         ) : status === "authenticated" ? (
           <div style={{ color: "#fff" }}>
-            <div class="dropdown">
+            <div className="dropdown">
               {session.user.name}
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <p>{session.user.email}</p>
                 {session.user.role !== null && session.user.role === "admin" ? (
                   <Link href="/admin">Dashboard</Link>

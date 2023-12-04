@@ -4,13 +4,14 @@ import BlogImage from "../_components/BlogImage";
 import parse from "html-react-parser";
 import { cache } from "react";
 
-const fetchUser = cache((slug) =>
-  prisma.blogPost.findFirst({
+const fetchUser = cache((slug) => {
+  const prisma = new PrismaClient();
+  return prisma.blogPost.findFirst({
     where: {
       slug: slug,
     },
-  })
-);
+  });
+});
 
 const BlugPostDetails = async ({ params }) => {
   const prisma = new PrismaClient();
