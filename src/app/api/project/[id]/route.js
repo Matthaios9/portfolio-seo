@@ -30,7 +30,8 @@ export async function PATCH(request, { params }) {
       status: 400,
     });
 
-  const { title, description, projectLink, githubLink, imageId } = bodyData;
+  const { title, category, description, projectLink, githubLink, imageId } =
+    bodyData;
 
   //   if (id) {
   //     const user = await prisma.user.findUnique({
@@ -49,7 +50,7 @@ export async function PATCH(request, { params }) {
 
   const updatedProject = await prisma.project.update({
     where: { id: project.id },
-    data: { title, description, projectLink, githubLink, imageId },
+    data: { title, category, description, projectLink, githubLink, imageId },
   });
 
   return NextResponse.json(updatedProject);

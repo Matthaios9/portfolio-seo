@@ -1,6 +1,13 @@
 "use client";
 import { useState } from "react";
-import { Box, Button, Container, Text, TextField } from "@radix-ui/themes";
+import {
+  Box,
+  Button,
+  Container,
+  Text,
+  TextField,
+  TextArea,
+} from "@radix-ui/themes";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 // import SimpleMDE from "react-simplemde-editor";
@@ -92,10 +99,10 @@ const BlogFOrm = ({ blogPost }) => {
           <Box mb="3">
             <Text>Meta Title</Text>
             <TextField.Root>
-              <TextField.Input
+              <TextArea
                 placeholder="Meat Title"
-                defaultValue={blogPost?.metaTitile}
                 {...register("metaTitle")}
+                defaultValue={blogPost?.metaTitle}
               />
             </TextField.Root>
           </Box>
@@ -121,9 +128,9 @@ const BlogFOrm = ({ blogPost }) => {
             />
           </Box>
 
-          {publicId && (
+          {(publicId || blogPost) && (
             <CldImage
-              src={publicId}
+              src={!publicId && blogPost ? blogPost.imageId : publicId}
               width={270}
               height={180}
               alt="A coffee image"

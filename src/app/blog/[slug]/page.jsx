@@ -39,9 +39,10 @@ const BlugPostDetails = async ({ params }) => {
           className={"bg-cover"}
         />
 
-        <div className="mt-5 mx-8 px-8 blog-body-text text-white">
-          {parse(blogs.body)}
-        </div>
+        <div
+          className="mt-5 mx-8 px-8 blog-body-text"
+          dangerouslySetInnerHTML={{ __html: blogs.body }}
+        ></div>
       </article>
     </Container>
   );

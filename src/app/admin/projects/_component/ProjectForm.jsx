@@ -83,6 +83,16 @@ const ProjectForm = ({ projectData }) => {
             />
           </TextField.Root>
         </Box>
+        <Box>
+          <Text>Title</Text>
+          <TextField.Root>
+            <TextField.Input
+              placeholder="Category"
+              {...register("category")}
+              defaultValue={projectData?.category}
+            />
+          </TextField.Root>
+        </Box>
         <Box className="pt-5">
           <Text>Description</Text>
           <TextArea

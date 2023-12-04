@@ -17,11 +17,13 @@ export async function POST(request) {
   const validation = projectSchema.safeParse(bodyRes);
   if (!validation.success)
     return NextResponse.json(validation.error.errors, { status: 400 });
-  const { title, description, projectLink, githubLink, imageId } = bodyRes;
+  const { title, category, description, projectLink, githubLink, imageId } =
+    bodyRes;
   //   return NextResponse.json(bodyRes);
   const newProject = await prisma.project.create({
     data: {
       title,
+      category,
       description,
       projectLink,
       githubLink,

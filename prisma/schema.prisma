@@ -83,6 +83,7 @@ model BlogPost {
 model Project {
   id          Int      @id @default(autoincrement())
   title       String   @db.VarChar(255)
+  category    String   @db.VarChar(255)
   description String   @db.Text()
   projectLink String   @db.Text()
   githubLink  String?  @db.Text()

@@ -6,7 +6,7 @@ const UploadImage = ({ setPublicId }) => {
   return (
     <>
       <CldUploadWidget
-        uploadPreset="kv6zlcsx"
+        uploadPreset="xksbhlbe"
         options={{
           sources: ["local"],
           multiple: false,
