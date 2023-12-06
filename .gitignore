@@ -10,6 +10,7 @@
 
 # next.js
 /.next/
+/.react-email/
 /out/
 
 # production
@@ -36,3 +37,4 @@ next-env.d.ts
 
 # Sentry Config File
 .sentryclirc
+.email-email
