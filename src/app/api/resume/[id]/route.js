@@ -26,8 +26,8 @@ export async function PATCH(request, { params }) {
       resume_requested: reqBody.status,
     },
   });
-
-  await sendAlertEmail(user.email, user.name);
+  if (updateResumeRequestStatus.resume_requested === "APPROVED")
+    await sendAlertEmail(user.email, user.name);
 
   if (updateResumeRequestStatus)
     return NextResponse.json(

@@ -27,7 +27,7 @@ const AlertTemplate = ({ name }) => {
               attach my resume as requested.
               <Link
                 className="text-center px-5 py-2.5 mr-2 mb-2 rounded-lg btn btn-primary hover:bg-purple-800 bg-purple-500 text-white"
-                href={`${base_url}//assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf`}
+                href={`${base_url}/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf`}
               >
                 Download Resume
               </Link>
