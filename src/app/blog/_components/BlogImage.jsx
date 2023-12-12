@@ -1,9 +1,9 @@
 "use client";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 
 const BlogImage = ({ imageId, height, width, alt, className }) => {
   return (
-    <CldImage
+    <Image
       src={imageId}
       width={width}
       height={height}

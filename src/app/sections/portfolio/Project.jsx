@@ -6,21 +6,13 @@ const Project = ({ project }) => {
   return (
     <Card className="portfolio__project">
       <div className="portfolio__project-image">
-        {project.hasOwnProperty("imageId") ? (
-          <CldImage
-            src={project.imageId}
-            alt="Portfolio Project Image"
-            height={"200"}
-            width="300"
-          />
-        ) : (
-          <Image
-            src={project.image}
-            alt="Portfolio Project Image"
-            height={"200"}
-            width="300"
-          />
-        )}
+        <Image
+          src={project.imageId}
+          alt="Portfolio Project Image"
+          height={"200"}
+          width="300"
+        />
+
       </div>
       <h4>{project.title}</h4>
       <p>
