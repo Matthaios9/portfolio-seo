@@ -1,5 +1,5 @@
 import authOptions from "../../auth/[...nextauth]/authOption";
-import { PrismaClient } from "@prisma/client";
+import prisma from "../../../../../prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { patchProjectShema } from "../../../../validationSchema/validationSchema";
@@ -8,7 +8,7 @@ import { slugify } from "../../../../utill/slug";
 
 export async function GET(request, { params }) {
   // return NextResponse.json(params);
-  const prisma = new PrismaClient();
+  // const prisma = new PrismaClient();
   const project = await prisma.project.findFirst({
     where: {
       id: parseInt(params.id),
@@ -19,7 +19,7 @@ export async function GET(request, { params }) {
 }
 
 export async function PATCH(request, { params }) {
-  const prisma = new PrismaClient();
+  // const prisma = new PrismaClient();
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({}, { status: 401 });
 

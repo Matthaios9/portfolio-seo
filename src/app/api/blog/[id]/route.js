@@ -1,5 +1,6 @@
 import authOptions from "../../auth/[...nextauth]/authOption";
-import { PrismaClient } from "@prisma/client";
+import prisma from "../../../../../prisma/client";
+
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { patchBlogShema } from "../../../../validationSchema/validationSchema";
@@ -8,7 +9,7 @@ import { slugify } from "../../../../utill/slug";
 
 export async function GET(request, { params }) {
   // return NextResponse.json(params);
-  const prisma = new PrismaClient();
+  // const prisma = new PrismaClient();
   const blogPost = await prisma.blogPost.findFirst({
     where: {
       slug: params.id,
@@ -19,7 +20,7 @@ export async function GET(request, { params }) {
 }
 
 export async function PATCH(request, { params }) {
-  const prisma = new PrismaClient();
+  // const prisma = new PrismaClient();
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({}, { status: 401 });
 
