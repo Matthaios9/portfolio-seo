@@ -4,7 +4,9 @@ import Link from "next/link";
 import DeletePostButton from "./DeleteBlogButton";
 import { CldImage } from "next-cloudinary";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
+
+import BlogImage from "../../../../../public/assets/blog.png";
+// import ReactMarkdown from "react-markdown";
 
 const BlogCard = ({ id, slug, title, body, image }) => {
   return (
@@ -15,18 +17,19 @@ const BlogCard = ({ id, slug, title, body, image }) => {
             <Inset clip="padding-box" side="top" pb="current">
               {!image ? (
                 <Image
-                  src={process.env.IMAGE_PLACE_HOLDER}
+                  width={270}
+                  height={180}
+                  priority
+                  src={BlogImage}
                   alt="Bold typography"
                   style={{
                     display: "block",
                     objectFit: "cover",
-                    width: "100%",
-                    height: 140,
                     backgroundColor: "var(--gray-5)",
                   }}
                 />
               ) : (
-                <CldImage
+                <Image
                   src={image}
                   width={270}
                   height={180}

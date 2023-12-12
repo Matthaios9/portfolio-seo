@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         id="ggoleAnalytics"
         src="https://www.googletagmanager.com/gtag/js?id=G-Z08KQJ4YH6"
       ></Script>
-      <Script id="anayalyticsScript">
+      <Script id="anayalyticsScript" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());

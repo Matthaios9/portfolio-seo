@@ -26,7 +26,7 @@ const ProjectCard = ({ id, title, description, image }) => {
                   }}
                 />
               ) : (
-                <CldImage
+                <Image
                   src={image}
                   width={270}
                   height={180}

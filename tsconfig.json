@@ -24,7 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "prisma/client.js",
-    "emails/AlertTemplate.jsx"
+    "emails/AlertTemplate.jsx",
+    "src/app/admin/blog/_component/Tiptap.jsx"
   ],
   "exclude": ["node_modules"]
 }

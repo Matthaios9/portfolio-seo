@@ -15,7 +15,7 @@ import Spinner from "../../../components/Spinner";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 
 import { projectSchema } from "../../../../validationSchema/validationSchema";
 import axios from "axios";
@@ -135,12 +135,7 @@ const ProjectForm = ({ projectData }) => {
         </Box>
 
         {(publicId || projectData) && (
-          <CldImage
-            src={!publicId && projectData ? projectData.imageId : publicId}
-            width={270}
-            height={180}
-            alt="A coffee image"
-          />
+          <Image src={(!publicId && projectData) ? projectData.imageId :  publicId} width={270} height={180} alt="A coffee image" />
         )}
         <Box className="pt-5">
           <Button type="submit" disabled={isSubmitting}>

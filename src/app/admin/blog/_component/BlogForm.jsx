@@ -20,7 +20,10 @@ import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Spinner from "../../../components/Spinner";
 import { CldImage } from "next-cloudinary";
-import UploadImage from "../../../components/UploadImage";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+const UploadImage = dynamic(() => import("../../../components/UploadImage"));
+// import UploadImage from "../../../components/UploadImage";
 
 const BlogFOrm = ({ blogPost }) => {
   const {
@@ -125,12 +128,13 @@ const BlogFOrm = ({ blogPost }) => {
                 setValue("imageId", id);
                 console.log("image id", id);
               }}
+              directory={'blog'}
             />
           </Box>
 
           {(publicId || blogPost) && (
-            <CldImage
-              src={!publicId && blogPost ? blogPost.imageId : publicId}
+            <Image
+              src={(!publicId && blogPost ? blogPost.imageId : publicId)}
               width={270}
               height={180}
               alt="A coffee image"
