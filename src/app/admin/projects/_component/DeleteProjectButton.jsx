@@ -6,7 +6,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const DeleteProjectButton = ({ PorjectId }) => {
+const DeleteProjectButton = ({ projectId }) => {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [isDeleting, setDeleting] = useState(false);
@@ -14,7 +14,7 @@ const DeleteProjectButton = ({ PorjectId }) => {
   const postDelete = async () => {
     setDeleting(true);
     await axios
-      .delete("/api/project/" + PorjectId)
+      .delete("/api/project/" + projectId)
       .then((res) => {
         router.push("/admin/blog/list");
         router.refresh();
