@@ -16,7 +16,7 @@ const EditBlogPage = async ({ params }) => {
       id: params.id,
     },
   });
-  if (!blogPost) notFound();
+
 
   return <BlogForm blogPost={blogPost} />;
 };

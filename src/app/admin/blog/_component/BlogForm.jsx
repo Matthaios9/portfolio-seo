@@ -132,9 +132,9 @@ const BlogFOrm = ({ blogPost }) => {
             />
           </Box>
 
-          {(publicId || blogPost) && (
+          {(publicId || blogPost.imageId) && (
             <Image
-              src={(!publicId && blogPost ? blogPost.imageId : publicId)}
+              src={(!publicId && blogPost.imageId ? blogPost.imageId : publicId)}
               width={270}
               height={180}
               alt="A coffee image"
