@@ -134,7 +134,7 @@ const ProjectForm = ({ projectData }) => {
           />
         </Box>
 
-        {(publicId || projectData.imageId) && (
+        {(publicId || projectData?.imageId) && (
           <Image src={(!publicId && projectData?.imageId) ? projectData.imageId : publicId} width={270} height={180} alt="A coffee image" />
         )}
         <Box className="pt-5">
