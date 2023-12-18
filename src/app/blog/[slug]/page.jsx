@@ -3,6 +3,7 @@ import { Card, Inset, Text, Strong, Container } from "@radix-ui/themes";
 import BlogImage from "../_components/BlogImage";
 import parse from "html-react-parser";
 import { cache } from "react";
+import { notFound } from 'next/navigation'
 
 const fetchUser = cache((slug) => {
   const prisma = new PrismaClient();
@@ -20,6 +21,7 @@ const BlugPostDetails = async ({ params }) => {
       slug: params.slug,
     },
   });
+  if (!blogs) notFound();
   return (
     <Container my="8" className="h-full pt-8">
       <h1
