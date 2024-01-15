@@ -6,9 +6,12 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
+
+// DATABASE_URL='mysql://u2aygatgkj7fiq9msbmo:pscale_pw_m0s6HugBsAwLD2IZAwHsCFYHhPVw19BtXFczLWdWOL9@aws.connect.psdb.cloud/zutet?sslaccept=strict'
 
 model Account {
   id                String  @id @default(cuid())
