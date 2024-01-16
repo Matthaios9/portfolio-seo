@@ -29,11 +29,13 @@ export const projectSchema = z.object({
     .string()
     .trim()
     .url({ message: "Project link must be url" })
+    .or(z.literal(""))
     .optional(),
   githubLink: z
     .string()
     .trim()
     .url({ message: "Github link must be url" })
+    .or(z.literal(""))
     .optional(),
   imageId: z.string().min(1, "Image is required").max(255).optional(),
 });
@@ -50,11 +52,13 @@ export const patchProjectShema = z.object({
     .string()
     .trim()
     .url({ message: "Project link must be url" })
+    .or(z.literal(""))
     .optional(),
   githubLink: z
     .string()
     .trim()
     .url({ message: "Github link must be url" })
+    .or(z.literal(""))
     .optional(),
   imageId: z.string().min(1, "Image is required").max(255).optional(),
 });

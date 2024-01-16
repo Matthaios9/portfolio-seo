@@ -21,7 +21,7 @@ const Project = ({ project }) => {
           : project.desc}
       </p>
       <div className="portfolio__project-cta">
-        <a
+        {project?.projectLink && <a
           href={
             project.hasOwnProperty("projectLink")
               ? project.projectLink
@@ -32,8 +32,8 @@ const Project = ({ project }) => {
           rel="noopener noreferrer"
         >
           Demo
-        </a>
-        <a
+        </a>}
+        {project?.githubLink && <a
           href={
             project.hasOwnProperty("githubLink")
               ? project.githubLink
@@ -44,7 +44,7 @@ const Project = ({ project }) => {
           rel="noopner noreferrer"
         >
           Github
-        </a>
+        </a>}
       </div>
     </Card>
   );
