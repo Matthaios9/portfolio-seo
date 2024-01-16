@@ -29,8 +29,11 @@ const ProjectCard = ({ id, title, description, image }) => {
                 <Image
                   src={image}
                   width={270}
-                  height={180}
-                  alt="A coffee image"
+                  height="120"
+                  alt={title}
+                  style={{
+                    height: '120px'
+                  }}
                 />
               )}
             </Inset>
