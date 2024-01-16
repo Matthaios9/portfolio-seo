@@ -9,16 +9,18 @@ import axios from "axios";
 const Portfolio = () => {
   const [projects, setProjects] = useState(data);
 
-  const categories = data.map((item) => item.category);
+  const categories = projects.map((item) => item.category);
   const uniqueCategories = ["all", ...new Set(categories)];
 
   const filterProjectsHandler = (category) => {
+    const data = [];
     if (category === "all") {
-      setProjects(data);
+      fetchProjects();
+      data = projects
       return;
     }
 
-    const filterProjects = data.filter(
+    const filterProjects = projects.filter(
       (project) => project.category === category
     );
     setProjects(filterProjects);

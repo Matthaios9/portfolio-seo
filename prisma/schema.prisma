@@ -88,7 +88,7 @@ model Project {
   title       String   @db.VarChar(255)
   category    String   @db.VarChar(255)
   description String   @db.Text()
-  projectLink String   @db.Text()
+  projectLink String?  @db.Text()
   githubLink  String?  @db.Text()
   imageId     String?  @db.Text()
   createdAt   DateTime @default(now())

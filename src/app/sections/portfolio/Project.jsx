@@ -9,7 +9,7 @@ const Project = ({ project }) => {
         <Image
           src={project.imageId}
           alt="Portfolio Project Image"
-          height={"200"}
+          height="150"
           width="300"
         />
 
