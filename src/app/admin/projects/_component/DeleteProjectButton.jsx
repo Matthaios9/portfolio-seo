@@ -16,7 +16,7 @@ const DeleteProjectButton = ({ projectId }) => {
     await axios
       .delete("/api/project/" + projectId)
       .then((res) => {
-        router.push("/admin/blog/list");
+        router.push("/admin/projects/list");
         router.refresh();
       })
       .catch((err) => {

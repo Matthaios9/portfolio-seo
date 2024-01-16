@@ -48,7 +48,7 @@ const data = [
     image: PigGame,
     title: "Pig-Dice game",
     desc: "Behold the HTML, CSS, and JavaScript-powered Pig Dice Roll Game! Two players take turns rolling a virtual dice on a beautifully designed interface. With each roll, points accumulate, but beware the dreaded 1 – it resets your turn's score! Victory awaits the player who first reaches a total score of 100. Strategy and risk management are the keys to success. Roll the dice, hold your breath, and strive to be the first to hit that winning score!",
-    demo: "https://zutet.com/pig-game/",
+    demo: "https://pigyrollgame.netlify.app",
     github: "https://github.com/Matthaios9/pig-game",
   },
   {
@@ -66,7 +66,7 @@ const data = [
     image: CoffeeWebsite,
     title: "Coffee Website",
     desc: "Designed with love using HTML and CSS, is a coffee enthusiast's dream. Dive into the world of aromatic brews, tantalizing blends, and cozy coffee shops. Explore our menu, learn about our story, and find your nearest café location. We've brewed this website to perfection, just like our coffee. Come and take a sip",
-    demo: "https://zutet.com/coffee-website/",
+    demo: "https://fresshcoffee.netlify.app",
     github: "https://github.com/Matthaios9/Coffee-Website-Main",
   },
   {
@@ -75,7 +75,7 @@ const data = [
     image: TravelWebsite,
     title: "Travel Website",
     desc: "Meticulously crafted using HTML and CSS, is your companion for discovering the world's most stunning destinations. Dive into a treasure trove of travel inspiration, browse travel packages, and read travel tips from seasoned adventurers. We've designed this website to spark your wanderlust and help you plan your next adventure. Get ready to embark on a virtual journey with ExploreWorld!",
-    demo: "https://zutet.com/travel-website/",
+    demo: "https://travel-timez.netlify.app/",
     github: "https://github.com/Matthaios9/Travel-website",
   },
   {
@@ -102,7 +102,7 @@ const data = [
     image: InteractiveCard,
     title: "Interactive Card",
     desc: "Discover our beautifully crafted Rating Card UI component, meticulously built with HTML, CSS, and JavaScript. This dynamic interface allows users to rate and review with ease. Hover over the stars to see them light up and provide instant feedback. With a sleek design and seamless interaction, it's the perfect addition to enhance user engagement on your website or application. Create memorable user experiences with our Interactive Rating Card UI component today!",
-    demo: "https://zutet.com/interactive-rating-card/",
+    demo: "https://fancy-card-css.netlify.app/",
     github: "https://github.com/Matthaios9/interactive_rating_card",
   },
   {
@@ -111,7 +111,7 @@ const data = [
     image: Discover,
     title: "Discover Website",
     desc: "Discover makes your travel planning a breeze. Whether you're seeking luxury hotels, cozy inns, or budget-friendly flights, we've got you covered. Embark on your next journey with confidence and convenience, right here on Discover. Start your travel adventure today!.",
-    demo: "https://zutet.com/discover/#",
+    demo: "https://trillo-zutet.netlify.app/",
     github: "https://github.com/Matthaios9/trillo",
   },
   {
@@ -120,7 +120,7 @@ const data = [
     image: Nexter,
     title: "Nexter",
     desc: "Discover beautiful homes with Nexter, where your dream property is just a click away. Our landing page, designed using HTML and CSS, simplifies the search for your perfect home. Explore stunning listings, browse through captivating images, and embark on your homebuying journey today!",
-    demo: "https://zutet.com/nexter/",
+    demo: "https://nexter-houz.netlify.app/",
     github: "https://github.com/Matthaios9/nexter",
   },
   {
@@ -129,7 +129,7 @@ const data = [
     image: Natours,
     title: "Natours:",
     desc: "Discover pristine landscapes, thrilling adventures, and serene getaways with Natours. Browse our curated listings, get inspired by stunning imagery, and embark on a journey that reconnects you with nature's beauty. Your next eco-adventure begins here. Start your exploration with Natours today!",
-    demo: "https://zutet.com/natours/",
+    demo: "https://natours-meta.netlify.app/",
     github: "https://github.com/Matthaios9/natours",
   },
   {
@@ -138,18 +138,18 @@ const data = [
     image: GuessNumber,
     title: "Guess Number:",
     desc: "Fun and challenging game built with HTML and JavaScript. Can you guess the secret number? Put your skills to the test as you input your best guesses and receive feedback in real-time. With each attempt, you'll get closer to the correct number. Keep playing, keep guessing, and see how quickly you can crack the code. Challenge yourself with 'Guess the Number' today!",
-    demo: "https://zutet.com/guess-number/",
+    demo: "https://guess-number-zutet.netlify.app/",
     github: "https://github.com/Matthaios9/guessNumber",
   },
-  {
-    id: 15,
-    category: "Frontend",
-    image: Calculator,
-    title: "Calculator:",
-    desc: "Meet QuickCalc, a minimalist online calculator crafted with HTML, CSS, and JavaScript. Perform basic arithmetic and calculations effortlessly with this user-friendly tool. It's the perfect companion for quick math tasks. Try QuickCalc now!",
-    demo: "https://zutet.com/calculator/",
-    github: "https://github.com/Matthaios9/calculator",
-  },
+  // {
+  //   id: 15,
+  //   category: "Frontend",
+  //   image: Calculator,
+  //   title: "Calculator:",
+  //   desc: "Meet QuickCalc, a minimalist online calculator crafted with HTML, CSS, and JavaScript. Perform basic arithmetic and calculations effortlessly with this user-friendly tool. It's the perfect companion for quick math tasks. Try QuickCalc now!",
+  //   demo: "https://zutet.com/calculator/",
+  //   github: "https://github.com/Matthaios9/calculator",
+  // },
 ];
 
 export default data;

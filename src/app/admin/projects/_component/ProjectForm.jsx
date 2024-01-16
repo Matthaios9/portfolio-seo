@@ -84,7 +84,7 @@ const ProjectForm = ({ projectData }) => {
           </TextField.Root>
         </Box>
         <Box>
-          <Text>Title</Text>
+          <Text>Category</Text>
           <TextField.Root>
             <TextField.Input
               placeholder="Category"
