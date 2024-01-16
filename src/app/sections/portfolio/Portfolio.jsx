@@ -13,10 +13,9 @@ const Portfolio = () => {
   const uniqueCategories = ["all", ...new Set(categories)];
 
   const filterProjectsHandler = (category) => {
-    const data = [];
     if (category === "all") {
       fetchProjects();
-      data = projects
+      setProjects(projects);
       return;
     }
 
