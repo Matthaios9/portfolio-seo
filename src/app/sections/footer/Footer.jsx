@@ -1,4 +1,4 @@
-import {links, socials} from './data'
+import { links, socials } from './data'
 import styles from './footer.module.css'
 
 /**
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.footer__copyright}>
-        <small>2022 Mattheos Tasios &copy; All Rights Reserved</small>
+        <small>2024 Mattheos Tasios &copy; All Rights Reserved</small>
       </div>
     </footer>
   )
