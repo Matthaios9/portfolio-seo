@@ -32,4 +32,6 @@ const ListBlogPage = async () => {
   );
 };
 
+
+export const dynamic = 'force-dynamic';
 export default ListBlogPage;
