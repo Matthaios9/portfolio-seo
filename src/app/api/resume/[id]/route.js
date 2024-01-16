@@ -26,12 +26,12 @@ export async function PATCH(request, { params }) {
       resume_requested: reqBody.status,
     },
   });
-  if (updateResumeRequestStatus.resume_requested === "APPROVED")
-    await sendAlertEmail(user.email, user.name);
+  // if (updateResumeRequestStatus.resume_requested === "APPROVED")
+  //   if (updateResumeRequestStatus) return true;
+  // await sendAlertEmail(user.email, user.name); // mail not working
 
-  if (updateResumeRequestStatus)
-    return NextResponse.json(
-      { status: updateResumeRequestStatus },
-      { status: 200 }
-    );
+  return NextResponse.json(
+    { status: updateResumeRequestStatus },
+    { status: 200 }
+  );
 }

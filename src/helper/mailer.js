@@ -19,14 +19,17 @@ export const sendAlertEmail = async (email, name) => {
         pass: process.env.EMAIL_HOST_PASSWORD,
       },
     });
-    const defaultEmaiemplate = `<p>Hi, Congratulation your request for Resume approved on <a href="https://zutet.com" traget="_blank"">zutet.com</a>. Your can signin to download my resume</p>`;
-    const emailHtml = render(AlertTemplate({ name: name }));
+    const base_url = process.env.NEXTAUTH_URL;
+    const pdfUrl =
+      base_url + `/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf`;
+    const defaultEmaiemplate = `<p>Hi, Congratulation your request for Resume approved on <a href="${base_url}" traget="_blank"">zutet.com</a>. Your can signin to download my resume</p>`;
+    // const emailHtml = render(AlertTemplate({ name: name }));
 
     const options = {
       from: process.env.FROM_EMAIL,
       to: email,
       subject: "Resume Request on Zutet.com",
-      html: emailHtml,
+      html: defaultEmaiemplate,
     };
 
     const meailResponce = await transporter.sendMail(options);
