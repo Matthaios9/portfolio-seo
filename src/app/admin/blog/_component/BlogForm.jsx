@@ -89,7 +89,8 @@ const BlogFOrm = ({ blogPost }) => {
             </TextField.Root>
           </Box>
 
-          <Box>
+          <Box mb="8">
+            <Text>Blog Content</Text>
             <Controller
               name="body"
               control={control}
@@ -110,7 +111,7 @@ const BlogFOrm = ({ blogPost }) => {
             </TextField.Root>
           </Box>
 
-          <Box>
+          <Box mb="3">
             <Text>Meta Decription</Text>
             <Controller
               name="metaDescription"
