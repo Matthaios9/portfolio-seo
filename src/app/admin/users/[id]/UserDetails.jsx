@@ -40,7 +40,7 @@ const UserDetails = ({ user }) => {
 
             <p><b>Yes</b>- When user requested for resume</p>
             <p><b>Approved</b>- If admin approves for resume, Status will be Approved</p>
-            <p><b>Denied</b>- If admin denies for resume, Status will be Approved</p>
+            <p><b>Denied</b>- If admin denies for resume, Status will be Denied</p>
         </Box>
     </Box>);
 };
