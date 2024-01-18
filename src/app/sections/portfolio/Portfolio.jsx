@@ -28,7 +28,7 @@ const Portfolio = () => {
     const projectsData = await axios
       .get("/api/project")
       .then((res) => res.data);
-    console.log("projects", projectsData);
+    // console.log("projects", projectsData);
     setProjects(projectsData);
   };
   useEffect(() => {

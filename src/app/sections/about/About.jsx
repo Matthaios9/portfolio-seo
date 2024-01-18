@@ -20,7 +20,7 @@ const About = () => {
             test: 'test'
         }
         const res = await axios.post('/api/me', from)
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setData(res.data.data)
     }
     useEffect(() => {

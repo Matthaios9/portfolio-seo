@@ -1,22 +1,22 @@
 "use client";
-import React, { ReactNode, useEffect } from "react";
+import React from "react";
 
 import AuthProvider from "../auth/Provider";
 import { Theme, Container } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import AuthNavBar from "./AuthNavBar";
-import { usePathname, useRouter } from 'next/navigation'
+// import { usePathname, useRouter } from 'next/navigation'
 
 const AdminLayout = ({ children }) => {
-  const pathname = usePathname()
-  const router = useRouter()
-  useEffect(() => {
-    console.log('path', pathname);
-    if (pathname === '/admin') {
-      router.refresh()
-    }
+  // const pathname = usePathname()
+  // const router = useRouter()
+  // useEffect(() => {
+  //   console.log('path', pathname);
+  //   if (pathname === '/admin') {
+  //     router.refresh()
+  //   }
 
-  }, [])
+  // }, [])
   return (
     <AuthProvider>
       <Theme>
