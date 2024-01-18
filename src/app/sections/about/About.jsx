@@ -59,7 +59,7 @@ const About = () => {
 
                         )
                             : status === "authenticated" && userdata?.resume_requested === "DENIED" ? (
-                                <p>Your Resume Request Denied</p>
+                                <Button color='red'>Your Resume Request Denied</Button>
                             ) : <Link className='btn primary' href="/api/auth/signin">
                                 Sign in Download
                             </Link>}
