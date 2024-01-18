@@ -5,7 +5,7 @@ import UsersChart from "./UsersChart";
 import { Flex, Grid } from "@radix-ui/themes";
 
 
-export default async function Home() {
+async function Home() {
   const NO = await prisma.user.count({
     where: { resume_requested: "NO" },
   });
@@ -29,3 +29,7 @@ export default async function Home() {
     </Grid>
   );
 }
+
+
+export const revalidate = 0;
+export default Home

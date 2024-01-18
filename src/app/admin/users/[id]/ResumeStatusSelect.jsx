@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Select } from "@radix-ui/themes";
 import toast, { Toaster } from "react-hot-toast";
@@ -11,19 +11,25 @@ const statuses = [
     { label: 'Denied', value: 'DENIED' },
 ];
 const ResumeStatusSelect = ({ userId, status }) => {
+    const [isLoading, setIsLoading] = useState(false);
 
     const assignStatus = (status) => {
         console.log("status: " + status);
+        setIsLoading(true)
         axios.patch("/api/resume/" + userId, {
             status: status || null
         }).then((response) => {
             if (response.status === 200) { }
             toast.success("Request updated successfully")
+            setIsLoading(false)
         })
             .catch(() => {
+                setIsLoading(false)
                 toast.error("Change could not be saved.")
             })
     }
+
+
 
     return <>
         <Select.Root
@@ -42,6 +48,7 @@ const ResumeStatusSelect = ({ userId, status }) => {
                 ))}
             </Select.Content>
         </Select.Root>
+        {isLoading && <p>Updating Please wait...</p>}
         <Toaster />
 
     </>;

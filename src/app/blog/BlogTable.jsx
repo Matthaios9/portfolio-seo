@@ -5,7 +5,11 @@ import { Grid, Box } from "@radix-ui/themes";
 
 const BlogTable = async () => {
     const prisma = new PrismaClient();
-    const blogs = await prisma.blogPost.findMany();
+    const blogs = await prisma.blogPost.findMany({
+        orderBy: {
+            createdAt: "desc",
+        },
+    });
 
     return (
         <Grid columns="1" align="center" gap="3" width="auto">

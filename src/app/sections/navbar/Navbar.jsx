@@ -4,19 +4,21 @@ import Image from "next/image";
 import navData from "./data";
 import { IoIosColorPalette } from "react-icons/io";
 import { useModalContext } from "../../../context/modal-context";
-import "./navbar.css";
+import styles from "./Navbar.module.css";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const { showModalHandler } = useModalContext();
   const { status, data: session } = useSession();
+  const router = useRouter()
   // console.log(session)
   if (status === "loading") return null;
   return (
-    <nav>
-      <div className="container nav__container">
-        <a href="/" className="nav__logo">
+    <nav className={styles.nav}>
+      <div className={`container ${styles.nav__container}`}>
+        <a href="/" className={styles.nav__logo}>
           <Image
             src={"/assets/img_nav.png"}
             width="40"
@@ -24,7 +26,7 @@ const Navbar = () => {
             alt="Logo"
           />
         </a>
-        <ul className="nav__menu">
+        <ul className={styles.nav__menu}>
           {navData.map((item) => (
             <li key={item.id}>
               <a href={item.link}>{item.title}</a>
@@ -39,18 +41,32 @@ const Navbar = () => {
         ) : status === "authenticated" ? (
           <div style={{ color: "#fff" }}>
             <div className="dropdown">
-              {session.user.name}
+              <p style={{
+                fontWeight: 'bold',
+
+              }} >{session.user.name}</p>
               <div className="dropdown-content">
-                <p>{session.user.email}</p>
+                <p style={{
+                  fontWeight: 'bold',
+
+                }}>{session.user.email}</p>
                 {session.user.role !== null && session.user.role === "admin" ? (
-                  <Link href="/admin">Dashboard</Link>
+                  <p style={{
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                  }}
+                    onClick={() => {
+                      router.push('/admin');
+                      router.refresh();
+                    }}
+                  >Dashboard</p>
                 ) : null}
                 <Link href="/api/auth/signout">Logout</Link>
               </div>
             </div>
           </div>
         ) : null}
-        <button id="theme__icon" onClick={showModalHandler}>
+        <button id={styles['theme__icon']} onClick={showModalHandler}>
           <IoIosColorPalette />
         </button>
       </div>

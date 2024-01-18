@@ -1,18 +1,31 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Dialog, Button, Flex, Text, TextField } from '@radix-ui/themes';
-import { HiDownload } from 'react-icons/hi'
-import data from './data'
-import Card from '../../components/Card'
-import styles from './about.module.css'
-import { useSession } from 'next-auth/react'
+"use client"
+import { Button, Dialog, Flex, Text, TextField } from '@radix-ui/themes';
 import axios from 'axios';
-import toast, { Toaster } from 'react-hot-toast';
-import { PrismaClient } from '@prisma/client'
+import { useSession } from 'next-auth/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import toast from 'react-hot-toast';
+import { HiDownload } from 'react-icons/hi';
+import Card from '../../components/Card';
+import { useEffect, useState } from 'react';
+import styles from './about.module.css';
+import data from './data';
 
 const About = () => {
     const { status, data: session } = useSession();
-   
+    const [userdata, setData] = useState("")
+
+    const getUserDetails = async () => {
+        const from = {
+            test: 'test'
+        }
+        const res = await axios.post('/api/me', from)
+        console.log(res.data.data);
+        setData(res.data.data)
+    }
+    useEffect(() => {
+        getUserDetails()
+    }, [])
     return (
         <section id="about" data-aos="fade-in">
             <div className={`container ${styles?.about__container}`}>
@@ -38,18 +51,18 @@ const About = () => {
                     <p>
                         I am a seasoned full-stack developer, armed with a degree in Computer Science and a relentless passion for crafting innovative digital solutions. With a heart full of curiosity and a mind wired for innovation, I am driven by the magic that happens when Java and JavaScript converge. With more than 3 years of experience, I&apos;ve honed my skills to create seamless, user-centric applications that merge functionality with aesthetics. From crafting robust backend systems with Java to conjuring interactive frontends using JavaScript, I&apos;m on a perpetual journey to innovate and elevate.
                     </p>
-                     {status === "authenticated" && session?.user?.resume_requested === "APPROVED" ? 
-                    <a href={'/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf'} download className='btn primary'>Download CV <HiDownload/></a>
-                    :status === "authenticated" && session?.user.resume_requested !== "APPROVED" ? (
-                        // <Link className='btn primary' href="/resume">Request for CV </Link>
-                        <DialogBox name={session.user.name} email={session.user.email} />
-                      
-                    ) : <Link className='btn primary' href="/api/auth/signin">
-                        Sign in Download
-                    </Link>}
+                    {status === "authenticated" && userdata?.resume_requested === "APPROVED" ?
+                        <a href={'/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf'} download className='btn primary'>Download CV <HiDownload /></a>
+                        : status === "authenticated" && userdata.resume_requested !== "APPROVED" ? (
+                            // <Link className='btn primary' href="/resume">Request for CV </Link>
+                            <DialogBox name={session.user.name} email={session.user.email} />
+
+                        ) : <Link className='btn primary' href="/api/auth/signin">
+                            Sign in Download
+                        </Link>}
 
 
-                   
+
                 </div>
             </div>
         </section>
