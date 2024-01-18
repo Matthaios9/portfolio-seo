@@ -53,13 +53,16 @@ const About = () => {
                     </p>
                     {status === "authenticated" && userdata?.resume_requested === "APPROVED" ?
                         <a href={'/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf'} download className='btn primary'>Download CV <HiDownload /></a>
-                        : status === "authenticated" && userdata.resume_requested !== "APPROVED" ? (
-                            // <Link className='btn primary' href="/resume">Request for CV </Link>
+                        : status === "authenticated" && userdata.resume_requested !== "NO" ? (
+
                             <DialogBox name={session.user.name} email={session.user.email} />
 
-                        ) : <Link className='btn primary' href="/api/auth/signin">
-                            Sign in Download
-                        </Link>}
+                        )
+                            : status === "authenticated" && userdata?.resume_requested === "DENIED" ? (
+                                <p>Your Resume Request Denied</p>
+                            ) : <Link className='btn primary' href="/api/auth/signin">
+                                Sign in Download
+                            </Link>}
 
 
 
