@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import BlogFormSkeleton from "../_component/BlogFormSkeleton";
+import BlogFormSkeleton from "./loading";
 const BlogForm = dynamic(() => import("../_component/BlogForm"), {
   ssr: false,
   loading: () => <BlogFormSkeleton />,

@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -9,17 +8,18 @@ import {
   TextField,
 } from "@radix-ui/themes";
 import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 import ErrorMessage from "../../../components/ErrorMessage";
-import UploadImage from "../../../components/UploadImage";
 import Spinner from "../../../components/Spinner";
+import UploadImage from "../../../components/UploadImage";
 
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
 
-import { projectSchema } from "../../../../validationSchema/validationSchema";
 import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import { projectSchema } from "../../../../validationSchema/validationSchema";
 const ProjectForm = ({ projectData }) => {
   const {
     register,
@@ -33,8 +33,6 @@ const ProjectForm = ({ projectData }) => {
 
   const [isSubmitting, setSubmitting] = useState(false);
   const [publicId, setPublicId] = useState("");
-
-  console.log(errors);
   const addProject = async (data) => {
     setSubmitting(true);
     if (projectData) {
