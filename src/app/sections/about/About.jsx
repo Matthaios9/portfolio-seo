@@ -4,12 +4,14 @@ import axios from 'axios';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import { HiDownload } from 'react-icons/hi';
 import Card from '../../components/Card';
 import { useEffect, useState } from 'react';
 import styles from './about.module.css';
 import data from './data';
+import { useRouter } from 'next/navigation';
+
 
 const About = () => {
     const { status, data: session } = useSession();
@@ -57,16 +59,18 @@ const About = () => {
 
                             <DialogBox name={session.user.name} email={session.user.email} />
 
-                        )
-                            : status === "authenticated" && userdata?.resume_requested === "DENIED" ? (
-                                <Button color='red'>Your Resume Request Denied</Button>
-                            ) : <Link className='btn primary' href="/api/auth/signin">
-                                Sign in Download
-                            </Link>}
+                        ) : status === "authenticated" && userdata.resume_requested === "YES" ? (
+                            <Button color='red'>Your Resume Request Already sent</Button>
+                        ) : status === "authenticated" && userdata?.resume_requested === "DENIED" ? (
+                            <Button color='red'>Your Resume Request Denied</Button>
+                        ) : <Link className='btn primary' href="/api/auth/signin">
+                            Sign in Download
+                        </Link>}
 
 
 
                 </div>
+
             </div>
         </section>
     )
@@ -74,8 +78,13 @@ const About = () => {
 
 
 const DialogBox = ({ name, email }) => {
+    const [sendReq, setSendReq] = useState(false)
 
-
+    const router = useRouter()
+    const handleRefresh = () => {
+        document.location.reload()
+    }
+    if (sendReq) return <Button color="green" onClick={handleRefresh}>Please refresh webiste after 10sec</Button>
     return (
         <Dialog.Root>
             <Dialog.Trigger>
@@ -118,11 +127,16 @@ const DialogBox = ({ name, email }) => {
                     <Dialog.Close
                         onClick={async () => {
                             try {
+                                setSendReq(true)
                                 const res = await axios.post('/api/resume', { resume_requested: "YES" })
-                                if (res.status === "200")
+                                if (res.status === "200") {
                                     toast.success(res.data)
-
+                                    router.push('/')
+                                    router.refresh()
+                                    setSendReq(false)
+                                }
                             } catch (e) {
+                                setSendReq(false)
                                 const message = e.response.data.error ? e.response.data.error : "request failed, Try again later"
                                 toast.error(message)
                                 console.log(e.response.data.error)
@@ -133,6 +147,7 @@ const DialogBox = ({ name, email }) => {
                     </Dialog.Close>
                 </Flex>
             </Dialog.Content>
+            <Toaster />
 
         </Dialog.Root>
     )
