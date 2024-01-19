@@ -5,15 +5,15 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import classnames from "classnames";
 import { useSession } from "next-auth/react";
-import "./navcss.css";
+import styles from "./BlogNavbar.module.css";
 
 import Image from "next/image";
 const AuthNavBar = () => {
   const { status, data: session } = useSession();
   return (
-    <nav>
-      <div className="container nav__container">
-        <a href="/" className="nav__logo">
+    <nav className={styles.nav}>
+      <div className={`container ${styles.nav__container}`}>
+        <a href="/" className={styles.nav__logo}>
           <Image
             src={"/assets/img_nav.png"}
             width="40"
@@ -31,9 +31,15 @@ const AuthNavBar = () => {
         ) : status === "authenticated" ? (
           <div style={{ color: "#fff" }}>
             <div className="dropdown">
-              {session.user.name}
+              <span style={{
+                color: 'white !important',
+                fontWeight: 'bold'
+              }}>{session.user.name}</span>
               <div className="dropdown-content">
-                <p>{session.user.email}</p>
+                <span style={{
+                  color: 'white',
+                  fontWeight: 'bold'
+                }}>{session.user.email}</span>
                 {session.user.role !== null && session.user.role === "admin" ? (
                   <Link href="/admin">Dashboard</Link>
                 ) : null}
@@ -56,7 +62,7 @@ const NavLinks = () => {
   ];
 
   return (
-    <ul className="nav__menu">
+    <ul className={styles.nav__menu}>
       {links.map((link) => (
         <li key={link.href}>
           <Link

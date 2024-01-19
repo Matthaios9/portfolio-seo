@@ -1,6 +1,6 @@
-nav {
+.nav {
   width: 100vw;
-  height: 5rem;
+  height: 4rem;
   display: grid;
   place-items: center;
   background: var(--color-primary);
@@ -47,7 +47,7 @@ nav {
   }
 }
 
-.blog-body-text > span,
+/* .blog-body-text > span,
 h1,
 h2,
 h3 h4,
@@ -55,4 +55,4 @@ h5,
 h6,
 p {
   color: #333 !important;
-}
+} */

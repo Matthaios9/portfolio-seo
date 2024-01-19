@@ -41,17 +41,17 @@ const Navbar = () => {
         ) : status === "authenticated" ? (
           <div style={{ color: "#fff" }}>
             <div className="dropdown">
-              <p style={{
+              <span style={{
                 fontWeight: 'bold',
 
-              }} >{session.user.name}</p>
+              }} >{session.user.name}</span>
               <div className="dropdown-content">
-                <p style={{
+                <span style={{
                   fontWeight: 'bold',
 
-                }}>{session.user.email}</p>
+                }}>{session.user.email}</span>
                 {session.user.role !== null && session.user.role === "admin" ? (
-                  <p style={{
+                  <span style={{
                     fontWeight: 'bold',
                     cursor: 'pointer',
                   }}
@@ -59,7 +59,7 @@ const Navbar = () => {
                       router.push('/admin');
                       router.refresh();
                     }}
-                  >Dashboard</p>
+                  >Dashboard</span>
                 ) : null}
                 <Link href="/api/auth/signout">Logout</Link>
               </div>
