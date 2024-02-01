@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import authOptions from "../../auth/[...nextauth]/authOption";
 import { PrismaClient } from "@prisma/client";
-import { sendAlertEmail } from "../../../../helper/mailer";
+import { sendEmail } from "../../../../helper/mailer";
 
 export async function PATCH(request, { params }) {
   const prisma = new PrismaClient();
@@ -26,9 +26,10 @@ export async function PATCH(request, { params }) {
       resume_requested: reqBody.status,
     },
   });
-  // if (updateResumeRequestStatus.resume_requested === "APPROVED")
-  //   if (updateResumeRequestStatus) return true;
-  // await sendAlertEmail(user.email, user.name); // mail not working
+  if (updateResumeRequestStatus.resume_requested === "APPROVED") {
+    await sendEmail(user.email, user.name); // mail not working
+    return true;
+  }
 
   return NextResponse.json(
     { status: updateResumeRequestStatus },

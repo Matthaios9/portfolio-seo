@@ -41,7 +41,7 @@ import nodemailer from "nodemailer";
 //   }
 // };
 
-export const sendTestEmail = async (email, name) => {
+export const sendEmail = async (email, name) => {
   try {
     //test
     // var transport = nodemailer.createTransport({
