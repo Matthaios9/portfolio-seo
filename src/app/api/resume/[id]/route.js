@@ -27,10 +27,8 @@ export async function PATCH(request, { params }) {
         resume_requested: reqBody.status,
       },
     });
-    if (updateResumeRequestStatus.resume_requested === "APPROVED") {
+    if (updateResumeRequestStatus.resume_requested === "APPROVED")
       await sendEmail(user.email, user.name); // mail not working
-      return true;
-    }
 
     return NextResponse.json(
       { status: updateResumeRequestStatus },
