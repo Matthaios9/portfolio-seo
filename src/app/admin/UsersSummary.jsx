@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 
 
-const IssueSummary = ({ NO,YES, APPROVED, DENIED } ) => {
+const IssueSummary = ({ NO, YES, APPROVED, DENIED }) => {
   const containers = [
     { label: 'Resume YES ', value: YES, status: 'YES' },
     {
@@ -21,12 +21,12 @@ const IssueSummary = ({ NO,YES, APPROVED, DENIED } ) => {
       {containers.map((container) => (
         <Card key={container.label}>
           <Flex direction="column" gap="1">
-            <Link
+            <p
               className='text-sm font-medium'
-              href={`/issues/list?status=${container.status}`}
+            // href={`/users/list?status=${container.status}`}
             >
               {container.label}
-            </Link>
+            </p>
             <Text size="5" className='font-bold'>{container.value}</Text>
           </Flex>
         </Card>

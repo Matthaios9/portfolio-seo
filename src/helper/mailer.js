@@ -55,11 +55,11 @@ export const sendEmail = async (email, name) => {
 
     //zutet
     var transport = nodemailer.createTransport({
-      host: "live.smtp.mailtrap.io",
-      port: 587,
+      host: "smtp.hostinger.com",
+      port: 465,
       auth: {
-        user: "api",
-        pass: "0a679e557f95ff32cab63617cf7a3693",
+        user: "dev@zutet.com",
+        pass: "Zutet123456789?",
       },
     });
     const base_url = process.env.NEXTAUTH_URL;
@@ -67,7 +67,7 @@ export const sendEmail = async (email, name) => {
       base_url + `/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf`;
     const defaultEmaiemplate = `<p>Hi, Congratulation your request for Resume approved on <a href="${base_url}" traget="_blank"">zutet.com</a>. Your can signin to <a href="${pdfUrl}">download</a> my resume</p>`;
     const options = {
-      from: "mailtrap@zutet.com",
+      from: "dev@zutet.com",
       to: email,
       subject: "Resume Request on Zutet.com",
       html: defaultEmaiemplate,
