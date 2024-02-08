@@ -41,7 +41,7 @@ import nodemailer from "nodemailer";
 //   }
 // };
 
-export const sendEmail = async (email, name, file) => {
+export const sendEmail = async (email, name) => {
   try {
     //test
     // var transport = nodemailer.createTransport({
@@ -64,7 +64,7 @@ export const sendEmail = async (email, name, file) => {
     });
     const base_url = process.env.NEXTAUTH_URL;
     console.log("file ", file);
-    const pdfUrl = file; //base_url + `/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf`;
+    //const pdfUrl = file; //base_url + `/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf`;
     const defaultEmaiemplate = `<p>Hi, Congratulation your request for Resume approved on <a href="${base_url}" traget="_blank"">zutet.com</a>. Your can signin to my resume</p>`;
     const options = {
       from: "dev@zutet.com",

@@ -18,12 +18,6 @@ export async function PATCH(request, { params }) {
       },
     });
 
-    const resume = await prisma.resume.findUnique({
-      where: {
-        id: 1,
-      },
-    });
-
     if (!user)
       return NextResponse.json({ error: "User not found" }, { status: 404 });
 
@@ -34,8 +28,8 @@ export async function PATCH(request, { params }) {
       },
     });
 
-    if (updateResumeRequestStatus.resume_requested === "APPROVED" && resume)
-      await sendEmail(user.email, user.name, resume.resumeId); // mail not working
+    if (updateResumeRequestStatus.resume_requested === "APPROVED")
+      await sendEmail(user.email, user.name); // mail not working
 
     return NextResponse.json(
       { status: updateResumeRequestStatus },
