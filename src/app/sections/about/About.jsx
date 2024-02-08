@@ -16,6 +16,7 @@ import { useRouter } from 'next/navigation';
 const About = () => {
     const { status, data: session } = useSession();
     const [userdata, setData] = useState("")
+    const [cv, setCv] = useState("/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf")
 
     const getUserDetails = async () => {
         const from = {
@@ -25,8 +26,17 @@ const About = () => {
         // console.log(res.data.data);
         setData(res.data.data)
     }
+    const getResume = async () => {
+        axios.get("/api/upload").then((res) => {
+            if (res) {
+                setCv(res.data?.data?.resumeId || cv)
+            }
+        }).catch((err) => console.log("resume request failed", err))
+
+    }
     useEffect(() => {
         getUserDetails()
+        getResume()
     }, [])
     return (
         <section id="about" data-aos="fade-in">
@@ -54,7 +64,7 @@ const About = () => {
                         I am a seasoned full-stack developer, armed with a degree in Computer Science and a relentless passion for crafting innovative digital solutions. With a heart full of curiosity and a mind wired for innovation, I am driven by the magic that happens when Java and JavaScript converge. With more than 3 years of experience, I&apos;ve honed my skills to create seamless, user-centric applications that merge functionality with aesthetics. From crafting robust backend systems with Java to conjuring interactive frontends using JavaScript, I&apos;m on a perpetual journey to innovate and elevate.
                     </p>
                     {status === "authenticated" && userdata?.resume_requested === "APPROVED" ?
-                        <a href={'/assets/Mattheos_Tasios_-_Junior_Software_Developer.pdf'} download className='btn primary'>Download CV <HiDownload /></a>
+                        <a href={cv} target='_blank' download className='btn primary'>Download CV <HiDownload /></a>
                         : status === "authenticated" && userdata.resume_requested === "NO" ? (
 
                             <DialogBox name={session.user.name} email={session.user.email} />
