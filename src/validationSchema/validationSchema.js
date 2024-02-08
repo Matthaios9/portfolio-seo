@@ -62,3 +62,7 @@ export const patchProjectShema = z.object({
     .optional(),
   imageId: z.string().min(1, "Image is required").max(255).optional(),
 });
+
+export const patchResumeShema = z.object({
+  resumeId: z.string().min(1, "Resume File is required.").max(255).optional(),
+});

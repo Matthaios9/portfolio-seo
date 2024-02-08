@@ -93,3 +93,9 @@ model Project {
   imageId     String?  @db.Text()
   createdAt   DateTime @default(now())
 }
+
+model Resume {
+  id        Int      @id @default(autoincrement())
+  resumeId  String?  @db.Text()
+  createdAt DateTime @default(now())
+}

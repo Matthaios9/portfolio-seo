@@ -43,6 +43,7 @@ const NavLinks = () => {
     { label: "Users", href: "/admin/users/list" },
     { label: "Blogs", href: "/admin/blog/list" },
     { label: "Projects", href: "/admin/projects/list" },
+    { label: "Upload", href: "/admin/upload" },
   ];
 
   return (
