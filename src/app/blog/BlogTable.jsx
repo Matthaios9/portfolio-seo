@@ -1,16 +1,9 @@
 import React from 'react'
-import { PrismaClient } from "@prisma/client";
 import FrontBlogCard from "./FrontBlogCard";
 import { Grid, Box } from "@radix-ui/themes";
 
 const BlogTable = async () => {
-    const prisma = new PrismaClient();
-    const blogs = await prisma.blogPost.findMany({
-        orderBy: {
-            createdAt: "desc",
-        },
-    });
-
+    const blogs = [];
     return (
         <Grid columns="1" align="center" gap="3" width="auto">
             {blogs && blogs.map((item) => (
@@ -30,5 +23,4 @@ const BlogTable = async () => {
 }
 
 export const dynamic = 'force-dynamic';
-
 export default BlogTable
