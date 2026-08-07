@@ -1,17 +1,6 @@
 const data = [
   // --- CYBERSECURITY PROJECTS ---
-  {
-    id: 9,
-    title: "Active Directory GPO Hardening",
-    category: "Cybersecurity",
-    description:
-      "Applied Center for Internet Security (CIS) benchmarks to Active Directory domain controllers via Group Policy Objects (GPOs), disabling legacy SMBv1 protocols and enforcing strict PowerShell logging.",
-    projectLink: null,
-    githubLink: "https://github.com/eladshamir/Internal-Network-PG",
-    imageId:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
-    createdAt: "2024-01-15T13:45:09.758Z",
-  },
+ 
   {
     id: 2,
     title: "Secure Node.js & JWT Authentication API",
@@ -112,6 +101,18 @@ const data = [
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
+  },
+   {
+    id: 9,
+    title: "Active Directory GPO Hardening",
+    category: "Cybersecurity",
+    description:
+      "Applied Center for Internet Security (CIS) benchmarks to Active Directory domain controllers via Group Policy Objects (GPOs), disabling legacy SMBv1 protocols and enforcing strict PowerShell logging.",
+    projectLink: null,
+    githubLink: "https://github.com/eladshamir/Internal-Network-PG",
+    imageId:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
+    createdAt: "2024-01-15T13:45:09.758Z",
   },
 
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
