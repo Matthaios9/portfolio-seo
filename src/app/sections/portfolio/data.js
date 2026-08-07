@@ -60,10 +60,49 @@ const data = [
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
   },
+ {
+    id: 6,
+    title: "SOC Log Analysis & Incident Response Lab",
+    category: "Cybersecurity",
+    description:
+      "Developed a Python automation script integrating the OWASP ZAP API to run headless baseline vulnerability scans against web applications, parsing JSON logs to generate remediation guides.",
+    projectLink: null,
+    githubLink: "https://github.com/zaproxy/zap-extensions",
+    imageId:
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+    createdAt: "2024-01-16T05:32:18.173Z",
+  },
+
+
+ {
+    id: 7,
+    title: "PCAP Traffic Analysis & C2 Detection",
+    category: "Cybersecurity",
+    description:
+      "Analyzed network packet capture files (.pcap) using Zeek logs and Suricata to trace malicious command-and-control (C2) traffic, DNS tunneling, and data exfiltration patterns.",
+    projectLink: null,
+    githubLink: "https://github.com/brimdata/brim",
+    imageId:
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+    createdAt: "2024-01-16T05:32:18.173Z",
+  },
+
+ {
+    id: 8,
+    title: "EDR & Threat Hunting Lab",
+    category: "Cybersecurity",
+    description:
+      "Deployed Wazuh EDR agents across endpoints, creating custom XML decoder rules to detect brute-force SSH attempts, file integrity changes, and suspicious execution.", 
+   projectLink: null,
+    githubLink: "https://github.com/wazuh/wazuh",
+    imageId:
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+    createdAt: "2024-01-16T05:32:18.173Z",
+  },
 
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
   {
-    id: 5,
+    id: 6,
     title: "Movie Explorer",
     category: "Frontend",
     description:
@@ -75,7 +114,7 @@ const data = [
     createdAt: "2024-01-15T13:45:09.758Z",
   },
   {
-    id: 6,
+    id: 7,
     title: "Hotel Nirvana",
     category: "Fullstack",
     description:
@@ -87,7 +126,7 @@ const data = [
     createdAt: "2024-01-15T13:46:58.058Z",
   },
   {
-    id: 7,
+    id: 8,
     title: "Whatsapp Clone",
     category: "Fullstack",
     description:
@@ -99,7 +138,7 @@ const data = [
     createdAt: "2024-01-15T13:48:47.597Z",
   },
   {
-    id: 8,
+    id: 9,
     title: "Pig-Dice Game",
     category: "Frontend",
     description:
@@ -111,7 +150,7 @@ const data = [
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
-    id: 9,
+    id: 10,
     title: "React Meals",
     category: "Frontend",
     description:
