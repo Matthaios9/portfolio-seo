@@ -1,7 +1,7 @@
 const data = [
   // --- CYBERSECURITY PROJECTS ---
   {
-    id: 1,
+    id: 9,
     title: "Active Directory GPO Hardening",
     category: "Cybersecurity",
     description:
@@ -25,7 +25,7 @@ const data = [
     createdAt: "2024-01-15T13:46:58.058Z",
   },
   {
-    id: 3,
+    id: 1,
     title: "Phishing Header & Malware YARA Analysis",
     category: "Cybersecurity",
     description:
@@ -36,20 +36,9 @@ const data = [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&h=150&fit=crop",
     createdAt: "2024-01-15T13:48:47.597Z",
   },
-  {
-    id: 4,
-    title: "SOC Log Analysis & Incident Response Lab",
-    category: "Cybersecurity",
-    description:
-      "Built a local SOC lab ingesting Windows Sysmon events into Splunk. Simulated brute-force attacks and privilege escalation using Atomic Red Team, documenting custom alert correlation rules and investigation playbooks.",
-    projectLink: null,
-    githubLink: "https://github.com/clarktyler/detection-lab",
-    imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
-    createdAt: "2024-01-16T05:32:18.173Z",
-  },
-  {
-    id: 5,
+  
+ {
+    id: 3,
     title: "Memory Forensics & Incident Investigation",
     category: "Cybersecurity",
     description:
@@ -61,7 +50,7 @@ const data = [
     createdAt: "2024-01-16T05:32:18.173Z",
   },
  {
-    id: 6,
+    id: 4,
     title: "SOC Log Analysis & Incident Response Lab",
     category: "Cybersecurity",
     description:
@@ -75,7 +64,7 @@ const data = [
 
 
  {
-    id: 7,
+    id: 8,
     title: "PCAP Traffic Analysis & C2 Detection",
     category: "Cybersecurity",
     description:
@@ -88,13 +77,38 @@ const data = [
   },
 
  {
-    id: 8,
+    id: 6,
     title: "EDR & Threat Hunting Lab",
     category: "Cybersecurity",
     description:
       "Deployed Wazuh EDR agents across endpoints, creating custom XML decoder rules to detect brute-force SSH attempts, file integrity changes, and suspicious execution.", 
    projectLink: null,
     githubLink: "https://github.com/wazuh/wazuh",
+    imageId:
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+    createdAt: "2024-01-16T05:32:18.173Z",
+  },
+  {
+    id: 7,
+    title: "Security-Event-Analysis-Automation-Tool",
+    category: "Cybersecurity",
+    description:
+      "A SOC Analyst's tool to automate the investigation & validation of possible Indicators of Compromise (IOCs) and perform various tasks including Phishing Email Analysis & Brand Monitoring to fasten the incident response.", 
+   projectLink: null,
+    githubLink: "https://github.com/AzharAnwar9/Security-Event-Analysis-Automation-Tool",
+    imageId:
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+    createdAt: "2024-01-16T05:32:18.173Z",
+  },
+  
+  {
+    id: 5,
+    title: "Wireshark Network Analysis Lab",
+    category: "Cybersecurity",
+    description:
+      "Hands-on network traffic analysis lab using Wireshark and Nmap against a deliberately vulnerable target (Metasploitable2) in an isolated VirtualBox environment.", 
+   projectLink: null,
+    githubLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
