@@ -56,7 +56,7 @@ const data = [
       "Analyzed memory dumps and disk images from compromised machines using Volatility 3 and Autopsy. Extracted unlinked process trees, network connections, and registry artifacts to establish incident timelines.",
     projectLink: null,
     githubLink: "https://github.com/volatilityfoundation/volatility3"
-    imageId: null,
+    imageId: "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
   },
 
