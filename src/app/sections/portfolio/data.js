@@ -1,77 +1,72 @@
 const data = [
   // --- CYBERSECURITY PROJECTS ---
- 
   {
-    id: 2,
+    id: 1,
     title: "Secure Node.js & JWT Authentication API",
     category: "Cybersecurity",
     description:
       "Built a production-ready REST API using Express.js and MongoDB. Implemented JSON Web Token (JWT) authorization, Bcrypt password hashing, and input validation to protect against injection attacks.",
-    projectLink: null,
+    projectLink: "https://github.com/expressjs/express",
     githubLink: "https://github.com/expressjs/express",
     imageId:
       "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=300&h=150&fit=crop",
     createdAt: "2024-01-15T13:46:58.058Z",
   },
   {
-    id: 1,
+    id: 2,
     title: "Phishing Header & Malware YARA Analysis",
     category: "Cybersecurity",
     description:
       "Analyzed malicious email headers and raw attachments. Extracted command-and-control (C2) domain IOCs and created automated CyberChef recipes and YARA detection rules to flag threat patterns.",
-    projectLink: null,
+    projectLink: "https://github.com/Yara-Rules/rules",
     githubLink: "https://github.com/Yara-Rules/rules",
     imageId:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&h=150&fit=crop",
     createdAt: "2024-01-15T13:48:47.597Z",
   },
-  
- {
+  {
     id: 3,
     title: "Memory Forensics & Incident Investigation",
     category: "Cybersecurity",
     description:
       "Analyzed memory dumps and disk images from compromised machines using Volatility 3 and Autopsy. Extracted unlinked process trees, network connections, and registry artifacts to establish incident timelines.",
-    projectLink: null,
+    projectLink: "https://github.com/volatilityfoundation/volatility3",
     githubLink: "https://github.com/volatilityfoundation/volatility3",
-    imageId: 
+    imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
   },
- {
+  {
     id: 4,
     title: "SOC Log Analysis & Incident Response Lab",
     category: "Cybersecurity",
     description:
       "Developed a Python automation script integrating the OWASP ZAP API to run headless baseline vulnerability scans against web applications, parsing JSON logs to generate remediation guides.",
-    projectLink: null,
+    projectLink: "https://github.com/zaproxy/zap-extensions",
     githubLink: "https://github.com/zaproxy/zap-extensions",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
   },
-
-
- {
-    id: 8,
+  {
+    id: 5,
     title: "PCAP Traffic Analysis & C2 Detection",
     category: "Cybersecurity",
     description:
       "Analyzed network packet capture files (.pcap) using Zeek logs and Suricata to trace malicious command-and-control (C2) traffic, DNS tunneling, and data exfiltration patterns.",
-    projectLink: null,
+    projectLink: "https://github.com/brimdata/brim",
     githubLink: "https://github.com/brimdata/brim",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
   },
-
- {
+  {
     id: 6,
     title: "EDR & Threat Hunting Lab",
     category: "Cybersecurity",
     description:
-      "Deployed Wazuh EDR agents across endpoints, creating custom XML decoder rules to detect brute-force SSH attempts, file integrity changes, and suspicious execution.", 
-   projectLink: null,
+      "Deployed Wazuh EDR agents across endpoints, creating custom XML decoder rules to detect brute-force SSH attempts, file integrity changes, and suspicious execution.",
+    projectLink: "https://github.com/wazuh/wazuh",
     githubLink: "https://github.com/wazuh/wazuh",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
@@ -79,36 +74,35 @@ const data = [
   },
   {
     id: 7,
-    title: "Security-Event-Analysis-Automation-Tool",
+    title: "Security Event Analysis Automation Tool",
     category: "Cybersecurity",
     description:
-      "A SOC Analyst's tool to automate the investigation & validation of possible Indicators of Compromise (IOCs) and perform various tasks including Phishing Email Analysis & Brand Monitoring to fasten the incident response.", 
-   projectLink: null,
+      "A SOC Analyst's tool to automate the investigation & validation of possible Indicators of Compromise (IOCs) and perform various tasks including Phishing Email Analysis & Brand Monitoring to fasten the incident response.",
+    projectLink: "https://github.com/AzharAnwar9/Security-Event-Analysis-Automation-Tool",
     githubLink: "https://github.com/AzharAnwar9/Security-Event-Analysis-Automation-Tool",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
   },
-  
   {
-    id: 5,
+    id: 8,
     title: "Wireshark Network Analysis Lab",
     category: "Cybersecurity",
     description:
-      "Hands-on network traffic analysis lab using Wireshark and Nmap against a deliberately vulnerable target (Metasploitable2) in an isolated VirtualBox environment.", 
-   projectLink: null,
+      "Hands-on network traffic analysis lab using Wireshark and Nmap against a deliberately vulnerable target (Metasploitable2) in an isolated VirtualBox environment.",
+    projectLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
     githubLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
   },
-   {
+  {
     id: 9,
     title: "Active Directory GPO Hardening",
     category: "Cybersecurity",
     description:
       "Applied Center for Internet Security (CIS) benchmarks to Active Directory domain controllers via Group Policy Objects (GPOs), disabling legacy SMBv1 protocols and enforcing strict PowerShell logging.",
-    projectLink: null,
+    projectLink: "https://github.com/eladshamir/Internal-Network-PG",
     githubLink: "https://github.com/eladshamir/Internal-Network-PG",
     imageId:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
@@ -117,7 +111,7 @@ const data = [
 
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
   {
-    id: 6,
+    id: 10,
     title: "Movie Explorer",
     category: "Frontend",
     description:
@@ -129,7 +123,7 @@ const data = [
     createdAt: "2024-01-15T13:45:09.758Z",
   },
   {
-    id: 7,
+    id: 11,
     title: "Hotel Nirvana",
     category: "Fullstack",
     description:
@@ -141,7 +135,7 @@ const data = [
     createdAt: "2024-01-15T13:46:58.058Z",
   },
   {
-    id: 8,
+    id: 12,
     title: "Whatsapp Clone",
     category: "Fullstack",
     description:
@@ -153,7 +147,7 @@ const data = [
     createdAt: "2024-01-15T13:48:47.597Z",
   },
   {
-    id: 9,
+    id: 13,
     title: "Pig-Dice Game",
     category: "Frontend",
     description:
@@ -165,7 +159,7 @@ const data = [
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
-    id: 10,
+    id: 14,
     title: "React Meals",
     category: "Frontend",
     description:
@@ -177,7 +171,7 @@ const data = [
     createdAt: "2024-01-16T05:41:58.435Z",
   },
   {
-    id: 10,
+    id: 15,
     title: "Fresh Coffee Website",
     category: "Frontend",
     description:
@@ -189,7 +183,7 @@ const data = [
     createdAt: "2024-01-16T05:43:44.397Z",
   },
   {
-    id: 11,
+    id: 16,
     title: "Travel Time",
     category: "Frontend",
     description:
@@ -201,7 +195,7 @@ const data = [
     createdAt: "2024-01-16T05:46:04.660Z",
   },
   {
-    id: 12,
+    id: 17,
     title: "Iphone 14 Animation",
     category: "Frontend",
     description:
@@ -213,7 +207,7 @@ const data = [
     createdAt: "2024-01-16T05:47:27.444Z",
   },
   {
-    id: 13,
+    id: 18,
     title: "Fancy Interactive Card",
     category: "Frontend",
     description:
@@ -225,7 +219,7 @@ const data = [
     createdAt: "2024-01-16T05:50:55.752Z",
   },
   {
-    id: 14,
+    id: 19,
     title: "Discover Website",
     category: "Frontend",
     description:
@@ -237,7 +231,7 @@ const data = [
     createdAt: "2024-01-16T05:53:52.137Z",
   },
   {
-    id: 15,
+    id: 20,
     title: "Nexter",
     category: "Frontend",
     description:
@@ -249,7 +243,7 @@ const data = [
     createdAt: "2024-01-16T05:56:44.845Z",
   },
   {
-    id: 16,
+    id: 21,
     title: "Natours",
     category: "Frontend",
     description:
@@ -261,7 +255,7 @@ const data = [
     createdAt: "2024-01-16T06:00:03.226Z",
   },
   {
-    id: 17,
+    id: 22,
     title: "Guess Number",
     category: "Frontend",
     description:
@@ -273,7 +267,7 @@ const data = [
     createdAt: "2024-01-16T06:18:01.164Z",
   },
   {
-    id: 18,
+    id: 23,
     title: "Cargo Game",
     category: "Fullstack",
     description:
