@@ -6,7 +6,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Built a production-ready REST API using Express.js and MongoDB. Implemented JSON Web Token (JWT) authorization, Bcrypt password hashing, and input validation to protect against injection attacks.",
-    projectLink: "https://github.com/expressjs/express",
+    projectLink: "https://jwt.io/",
     githubLink: "https://github.com/expressjs/express",
     imageId:
       "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=300&h=150&fit=crop",
@@ -18,7 +18,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Analyzed malicious email headers and raw attachments. Extracted command-and-control (C2) domain IOCs and created automated CyberChef recipes and YARA detection rules to flag threat patterns.",
-    projectLink: "https://github.com/Yara-Rules/rules",
+    projectLink: "https://cyberchef.org/",
     githubLink: "https://github.com/Yara-Rules/rules",
     imageId:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&h=150&fit=crop",
@@ -30,7 +30,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Analyzed memory dumps and disk images from compromised machines using Volatility 3 and Autopsy. Extracted unlinked process trees, network connections, and registry artifacts to establish incident timelines.",
-    projectLink: "https://github.com/volatilityfoundation/volatility3",
+    projectLink: "https://volatility3.readthedocs.io/en/latest/volatility3.plugins.html",
     githubLink: "https://github.com/volatilityfoundation/volatility3",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
@@ -42,7 +42,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Developed a Python automation script integrating the OWASP ZAP API to run headless baseline vulnerability scans against web applications, parsing JSON logs to generate remediation guides.",
-    projectLink: "https://github.com/zaproxy/zap-extensions",
+    projectLink: "https://juice-shop.herokuapp.com/",
     githubLink: "https://github.com/zaproxy/zap-extensions",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
@@ -54,7 +54,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Analyzed network packet capture files (.pcap) using Zeek logs and Suricata to trace malicious command-and-control (C2) traffic, DNS tunneling, and data exfiltration patterns.",
-    projectLink: "https://github.com/brimdata/brim",
+    projectLink: "https://www.malware-traffic-analysis.net/",
     githubLink: "https://github.com/brimdata/brim",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
@@ -66,7 +66,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Deployed Wazuh EDR agents across endpoints, creating custom XML decoder rules to detect brute-force SSH attempts, file integrity changes, and suspicious execution.",
-    projectLink: "https://github.com/wazuh/wazuh",
+    projectLink: "https://demo.wazuh.com",
     githubLink: "https://github.com/wazuh/wazuh",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
@@ -78,7 +78,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "A SOC Analyst's tool to automate the investigation & validation of possible Indicators of Compromise (IOCs) and perform various tasks including Phishing Email Analysis & Brand Monitoring to fasten the incident response.",
-    projectLink: "https://github.com/AzharAnwar9/Security-Event-Analysis-Automation-Tool",
+    projectLink: "https://www.virustotal.com/gui/home/search",
     githubLink: "https://github.com/AzharAnwar9/Security-Event-Analysis-Automation-Tool",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
@@ -90,7 +90,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Hands-on network traffic analysis lab using Wireshark and Nmap against a deliberately vulnerable target (Metasploitable2) in an isolated VirtualBox environment.",
-    projectLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
+    projectLink: "https://www.wireshark.org/sample_captures/",
     githubLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
@@ -102,7 +102,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Applied Center for Internet Security (CIS) benchmarks to Active Directory domain controllers via Group Policy Objects (GPOs), disabling legacy SMBv1 protocols and enforcing strict PowerShell logging.",
-    projectLink: "https://github.com/eladshamir/Internal-Network-PG",
+    projectLink: "https://www.pingcastle.com/download/",
     githubLink: "https://github.com/eladshamir/Internal-Network-PG",
     imageId:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
