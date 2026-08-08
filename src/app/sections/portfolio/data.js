@@ -6,7 +6,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Built a production-ready REST API using Express.js and MongoDB. Implemented JSON Web Token (JWT) authorization, Bcrypt password hashing, and input validation to protect against injection attacks.",
-    projectLink: "https://jwt.io/",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBxPS88n5uqRI6WuR5TbnT8Af93MTku7T5BaGjuvYIfUaQ?e=BzNQbU",
     githubLink: "https://github.com/expressjs/express",
     imageId:
       "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=300&h=150&fit=crop",
