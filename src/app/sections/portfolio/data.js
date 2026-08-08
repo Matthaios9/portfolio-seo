@@ -2,10 +2,10 @@ const data = [
   // --- CYBERSECURITY PROJECTS ---
   {
     id: 1,
-    title: "Secure Node.js & JWT Authentication API",
+    title: "secure JWT Authentication",
     category: "Cybersecurity",
     description:
-      "Built a production-ready REST API using Express.js and MongoDB. Implemented JSON Web Token (JWT) authorization, Bcrypt password hashing, and input validation to protect against injection attacks.",
+      "Demonstrated custom JWT creation and token verification workflows. Constructed a customized JSON payload (sub, role: admin, permissions), signed it using HMAC-SHA256 with a 256-bit secret key to generate a signed JWT token, and subsequently decoded and validated the token signature to confirm payload integrity and authentic claim extraction.",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBxPS88n5uqRI6WuR5TbnT8Af93MTku7T5BaGjuvYIfUaQ?e=BzNQbU",
     githubLink: "https://github.com/expressjs/express",
     imageId:
@@ -14,11 +14,11 @@ const data = [
   },
   {
     id: 2,
-    title: "Phishing Header & Malware YARA Analysis",
+    title: "Phishing message Header Analyzer",
     category: "Cybersecurity",
     description:
-      "Analyzed malicious email headers and raw attachments. Extracted command-and-control (C2) domain IOCs and created automated CyberChef recipes and YARA detection rules to flag threat patterns.",
-    projectLink: "https://cyberchef.org/",
+      "Performed threat investigation on malicious email headers using Message Header Analyzer. Identified display-name spoofing (`PayPal Security Team`) pointing to a suspicious `Reply-To` address (`credential-harvester@evil-domain.com`), extracted the true originating IP (`192.0.2.45`), traced routing hops, and verified key domain authentication check failures (`SPF`, `DKIM`, and `DMARC`).",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDmqREwmMQ1S4U7sE7AV5mHAdw3N5E1Aa-5vC94n8LkBQc?e=Z0Pp1Z",
     githubLink: "https://github.com/Yara-Rules/rules",
     imageId:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&h=150&fit=crop",
