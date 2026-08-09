@@ -26,11 +26,11 @@ const data = [
   },
   {
     id: 3,
-    title: "Memory Forensics & Incident Investigation",
+    title: "Memory Forensics and investigation",
     category: "Cybersecurity",
     description:
-      "Analyzed memory dumps and disk images from compromised machines using Volatility 3 and Autopsy. Extracted unlinked process trees, network connections, and registry artifacts to establish incident timelines.",
-    projectLink: "https://volatility3.readthedocs.io/en/latest/volatility3.plugins.html",
+      "Executed memory forensic analysis on a raw memory dump (`exercise1.raw`) using Volatility Framework 2.5. Identified OS profile (`Win7SP1x64`), performed process enumeration (`pslist`), analyzed active TCP/UDP network connections (`netscan`), and ran process anomaly detection (`psxview`) to uncover hidden or unlinked malicious processes during incident triage.",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBrGY5QPvLoSpS5dPJa5FlzAd0MP0rxOETr0vivfWr0ao4?e=VHEZDO",
     githubLink: "https://github.com/volatilityfoundation/volatility3",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
