@@ -38,7 +38,7 @@ const data = [
   },
   {
     id: 4,
-    title: "Vulnerability Assessment",
+    title: "Vulnerability Assessment with ZAP API",
     category: "Cybersecurity",
     description:
       "running OWASP ZAP 2.15.0 on Kali Linux. Executed automated web crawling, active vulnerability scanning, and live traffic interception using HUD proxy against a target web application.",
@@ -50,7 +50,7 @@ const data = [
   },
   {
     id: 5,
-    title: "PCAP Traffic Analysis & C2 Detection",
+    title: "Threat Hunting with Zeek",
     category: "Cybersecurity",
     description:
       "Analyzed network packet capture files (.pcap) using Zeek logs and Suricata to trace malicious command-and-control (C2) traffic, DNS tunneling, and data exfiltration patterns.",
