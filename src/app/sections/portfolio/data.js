@@ -38,10 +38,10 @@ const data = [
   },
   {
     id: 4,
-    title: "SOC Log Analysis & Incident Response Lab",
+    title: "Vulnerability Assessment",
     category: "Cybersecurity",
     description:
-      "Developed a Python automation script integrating the OWASP ZAP API to run headless baseline vulnerability scans against web applications, parsing JSON logs to generate remediation guides.",
+      "running OWASP ZAP 2.15.0 on Kali Linux. Executed automated web crawling, active vulnerability scanning, and live traffic interception using HUD proxy against a target web application.",
     projectLink: "https://juice-shop.herokuapp.com/",
     githubLink: "https://github.com/zaproxy/zap-extensions",
     imageId:
