@@ -42,7 +42,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "running OWASP ZAP 2.15.0 on Kali Linux. Executed automated web crawling, active vulnerability scanning, and live traffic interception using HUD proxy against a target web application.",
-    projectLink: "https://juice-shop.herokuapp.com/",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBF36DHBKZfQIznNWdxM1KtAZtvEI3flpisq_oodxKjTyY?e=ydhHs9",
     githubLink: "https://github.com/zaproxy/zap-extensions",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
