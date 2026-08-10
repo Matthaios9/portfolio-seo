@@ -54,7 +54,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Analyzed network packet capture files (.pcap) using Zeek logs and Suricata to trace malicious command-and-control (C2) traffic, DNS tunneling, and data exfiltration patterns.",
-    projectLink: "https://www.malware-traffic-analysis.net/",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDZKMMqlRHhTrOStzTbl3QeAcCJjlP32WnX8MXjZDH2wu4?e=KIhDsF",
     githubLink: "https://github.com/brimdata/brim",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
