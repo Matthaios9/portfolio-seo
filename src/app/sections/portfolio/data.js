@@ -62,11 +62,11 @@ const data = [
   },
   {
     id: 6,
-    title: "EDR & Threat Hunting Lab",
+    title: "SOC Lab",
     category: "Cybersecurity",
     description:
       "Deployed Wazuh EDR agents across endpoints, creating custom XML decoder rules to detect brute-force SSH attempts, file integrity changes, and suspicious execution.",
-    projectLink: "https://demo.wazuh.com",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQD5EkkDzu7qTZ8grikRarokATkb7f8cZ8z0qNtr5zdr8dU?e=8KCKCQ",
     githubLink: "https://github.com/wazuh/wazuh",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
