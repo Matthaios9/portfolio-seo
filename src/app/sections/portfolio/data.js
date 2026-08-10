@@ -89,7 +89,7 @@ const data = [
     title: "Network Traffic Analysis",
     category: "Cybersecurity",
     description:
-      "Hands-on network traffic analysis lab using Wireshark and Nmap against a deliberately vulnerable target (Metasploitable2) in an isolated VirtualBox environment.",
+      "Hands-on packet capture analysis using Wireshark to inspect network activity, including DNS queries, ICMP ping requests, SMB2 file operations, and RDP remote desktop connections.",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQC0Al5d5cl-T4_-xut9vOEnARTcZ5IksIfLE4li8j9Q3XE?e=HALdab",
     githubLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
     imageId:
