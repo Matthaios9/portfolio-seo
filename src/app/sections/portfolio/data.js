@@ -65,7 +65,7 @@ const data = [
     title: "SOC Lab",
     category: "Cybersecurity",
     description:
-      "Deployed Wazuh EDR agents across endpoints, creating custom XML decoder rules to detect brute-force SSH attempts, file integrity changes, and suspicious execution.",
+      "deploying an end-to-end open-source SIEM security monitoring infrastructure. Highlights step-by-step setup including Elasticsearch engine, Filebeat data collection pipeline, Kibana interface integration, Wazuh Manager platform, and cross-platform Wazuh Agent deployments on Ubuntu Server and Windows endpoints.",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQD5EkkDzu7qTZ8grikRarokATkb7f8cZ8z0qNtr5zdr8dU?e=8KCKCQ",
     githubLink: "https://github.com/wazuh/wazuh",
     imageId:
