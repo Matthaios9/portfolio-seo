@@ -74,12 +74,12 @@ const data = [
   },
   {
     id: 7,
-    title: "Security Event Analysis Automation Tool",
+    title: "Exploit Lab",
     category: "Cybersecurity",
     description:
-      "A SOC Analyst's tool to automate the investigation & validation of possible Indicators of Compromise (IOCs) and perform various tasks including Phishing Email Analysis & Brand Monitoring to fasten the incident response.",
-    projectLink: "https://www.virustotal.com/gui/home/search",
-    githubLink: "https://github.com/AzharAnwar9/Security-Event-Analysis-Automation-Tool",
+      "SMB enumeration and credential brute-forcing using Metasploit in Kali Linux against a target host, including SMB version detection, user and share enumeration, password list creation, credential testing via smb_login, and directory listing on exposed shares.",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDvCuSLk4D4Q65KTSU-O1PDAWfCmEGhryctCp5s4XF-JCg?e=FmNhb4",
+    githubLink: "https://github.com/rapid7/metasploitable3",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
     createdAt: "2024-01-16T05:32:18.173Z",
