@@ -86,11 +86,11 @@ const data = [
   },
   {
     id: 8,
-    title: "Wireshark Network Analysis Lab",
+    title: "Network Traffic Analysis",
     category: "Cybersecurity",
     description:
       "Hands-on network traffic analysis lab using Wireshark and Nmap against a deliberately vulnerable target (Metasploitable2) in an isolated VirtualBox environment.",
-    projectLink: "https://www.wireshark.org/sample_captures/",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQC0Al5d5cl-T4_-xut9vOEnARTcZ5IksIfLE4li8j9Q3XE?e=HALdab",
     githubLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
     imageId:
       "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
