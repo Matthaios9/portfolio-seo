@@ -101,7 +101,7 @@ const data = [
     title: "Active Directory GPO Hardening",
     category: "Cybersecurity",
     description:
-      "Applied Center for Internet Security (CIS) benchmarks to Active Directory domain controllers via Group Policy Objects (GPOs), Configuring the Default Domain Controllers Policy,Allow Server Operators to schedule tasks,LDAP server signing requirements,Refuse password changes for machine accounts,Force logoff when logon hours expire disabling legacy SMBv1 protocols,LAN Manager authentication level and Applying and Verifying Policy Updates",
+      "Applied Center for Internet Security (CIS) benchmarks to Active Directory domain controllers via Group Policy Objects (GPOs), Configuring the Default Domain Controllers Policy,LDAP server signing requirements,Refuse password changes for machine accounts,LAN Manager authentication level and Applying and Verifying Policy Updates",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDNTg3jls1ZQrJvV-LdZXDjAfFfpZORpuFCv94wUfbTUC0?e=5YbbFQ",
     githubLink: "https://github.com/LoicVeirman/HardenAD",
     imageId:
