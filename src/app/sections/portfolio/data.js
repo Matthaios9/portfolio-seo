@@ -120,7 +120,18 @@ const data = [
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
     createdAt: "2024-01-15T13:45:09.758Z",
   },
-
+   {
+    id: 11,Port Scanning & Verification
+    title: "Linux Network Security Lab",
+    category: "Cybersecurity",
+    description:
+      "Linux system administration and security testing across two terminal sessions (a host/server terminal at the top and a client terminal at the bottom),Installing Network Tools,Inspecting Network Services & Firewall,Configuring Firewall Rules,",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCO9FM2b2egQqB5bzIkKAtqAXQepj4rcRL992YfswJWqfI?e=fDiCYX",
+    githubLink: "https://github.com/nmap/nmap",
+    imageId:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
+    createdAt: "2024-01-15T13:45:09.758Z",
+  },
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
   {
     id: 10,
