@@ -121,7 +121,7 @@ const data = [
     createdAt: "2024-01-15T13:45:09.758Z",
   },
    {
-    id: 11,Port Scanning & Verification
+    id: 11,
     title: "Linux Network Security Lab",
     category: "Cybersecurity",
     description:
