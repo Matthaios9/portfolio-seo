@@ -144,7 +144,7 @@ const data = [
       "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=300&h=150&fit=crop", // Router / Firewall Hardware
     createdAt: "2024-01-15T13:45:09.758Z",
   },
-];
+
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
   {
     id: 10,
