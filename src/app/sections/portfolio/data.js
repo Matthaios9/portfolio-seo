@@ -69,7 +69,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQD5EkkDzu7qTZ8grikRarokATkb7f8cZ8z0qNtr5zdr8dU?e=8KCKCQ",
     githubLink: "https://github.com/wazuh/wazuh",
     imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop", // Monitoring dashboards / Terminal
+      "https://images.unsplash.com/photo-1751448555253-f39c06e29d82?w=300&h=150&fit=crop", // Monitoring dashboards / Terminal
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
