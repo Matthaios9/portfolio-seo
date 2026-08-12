@@ -132,6 +132,18 @@ const data = [
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
     createdAt: "2024-01-15T13:45:09.758Z",
   },
+   {
+    id: 12,
+    title: "PfSense Firewall Lab",
+    category: "Cybersecurity",
+    description:
+      "Creating the pfSense Virtual Machine in VirtualBox,Virtual Network Interface Configuration,pfSense Console Installation & Initial Setup,Client Machine Verification (Windows 10 VM),Accessing pfSense WebGUI & Setup Wizard",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBfqAt6tytoRa1gxPfW_eMrAXIv0y9an2GX5atQMI0COlc?e=qneAWP",
+    githubLink: "https://github.com/Netgate/pfsense-api",
+    imageId:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
+    createdAt: "2024-01-15T13:45:09.758Z",
+  },
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
   {
     id: 10,
