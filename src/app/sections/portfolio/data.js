@@ -9,7 +9,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBxPS88n5uqRI6WuR5TbnT8Af93MTku7T5BaGjuvYIfUaQ?e=BzNQbU",
     githubLink: "https://github.com/expressjs/express",
     imageId:
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=300&h=150&fit=crop", // Code & Authentication
     createdAt: "2024-01-15T13:46:58.058Z",
   },
   {
@@ -21,7 +21,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDmqREwmMQ1S4U7sE7AV5mHAdw3N5E1Aa-5vC94n8LkBQc?e=Z0Pp1Z",
     githubLink: "https://github.com/Yara-Rules/rules",
     imageId:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&h=150&fit=crop", // Digital padlock / Security
     createdAt: "2024-01-15T13:48:47.597Z",
   },
   {
@@ -33,7 +33,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBrGY5QPvLoSpS5dPJa5FlzAd0MP0rxOETr0vivfWr0ao4?e=VHEZDO",
     githubLink: "https://github.com/volatilityfoundation/volatility3",
     imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=150&fit=crop", // Binary / Digital matrix
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
@@ -45,7 +45,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBF36DHBKZfQIznNWdxM1KtAZtvEI3flpisq_oodxKjTyY?e=ydhHs9",
     githubLink: "https://github.com/zaproxy/zap-extensions",
     imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1618060932014-4deda4932554?w=300&h=150&fit=crop", // Shield / Cyber defense
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
@@ -57,7 +57,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDZKMMqlRHhTrOStzTbl3QeAcCJjlP32WnX8MXjZDH2wu4?e=KIhDsF",
     githubLink: "https://github.com/zeek/zeek",
     imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop", // Network server / Data links
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
@@ -69,7 +69,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQD5EkkDzu7qTZ8grikRarokATkb7f8cZ8z0qNtr5zdr8dU?e=8KCKCQ",
     githubLink: "https://github.com/wazuh/wazuh",
     imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop", // Monitoring dashboards / Terminal
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
@@ -81,7 +81,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDvCuSLk4D4Q65KTSU-O1PDAWfCmEGhryctCp5s4XF-JCg?e=FmNhb4",
     githubLink: "https://github.com/rapid7/metasploitable3",
     imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1563089145-599997674d42?w=300&h=150&fit=crop", // Cyber attack / Hacker theme
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
@@ -93,7 +93,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQC0Al5d5cl-T4_-xut9vOEnARTcZ5IksIfLE4li8j9Q3XE?e=HALdab",
     githubLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
     imageId:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=300&h=150&fit=crop", // Fiber optics / Data packets
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
@@ -105,10 +105,10 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDNTg3jls1ZQrJvV-LdZXDjAfFfpZORpuFCv94wUfbTUC0?e=5YbbFQ",
     githubLink: "https://github.com/LoicVeirman/HardenAD",
     imageId:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&h=150&fit=crop", // Infrastructure / Enterprise Servers
     createdAt: "2024-01-15T13:45:09.758Z",
   },
-   {
+  {
     id: 10,
     title: "Linux Os Hardening",
     category: "Cybersecurity",
@@ -117,10 +117,10 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCO9FM2b2egQqB5bzIkKAtqAXQepj4rcRL992YfswJWqfI?e=fDiCYX",
     githubLink: "https://github.com/jbarcia/Lynis",
     imageId:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=300&h=150&fit=crop", // Linux Terminal / CLI
     createdAt: "2024-01-15T13:45:09.758Z",
   },
-   {
+  {
     id: 11,
     title: "Linux Network Security Lab",
     category: "Cybersecurity",
@@ -129,10 +129,10 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQAjboY_05N2QrQa6XbZCIOSAYDDqF-NUp7DVr6Gm2naIaA?e=m4fPQX",
     githubLink: "https://github.com/nmap/nmap",
     imageId:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?w=300&h=150&fit=crop", // Cybersecurity Code / Terminal
     createdAt: "2024-01-15T13:45:09.758Z",
   },
-   {
+  {
     id: 12,
     title: "PfSense Firewall Lab",
     category: "Cybersecurity",
@@ -141,9 +141,10 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBfqAt6tytoRa1gxPfW_eMrAXIv0y9an2GX5atQMI0COlc?e=qneAWP",
     githubLink: "https://github.com/Netgate/pfsense-api",
     imageId:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
+      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=300&h=150&fit=crop", // Router / Firewall Hardware
     createdAt: "2024-01-15T13:45:09.758Z",
   },
+];
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
   {
     id: 10,
