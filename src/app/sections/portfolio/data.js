@@ -126,7 +126,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Linux system administration and security testing across two terminal sessions (a host/server terminal at the top and a client terminal at the bottom),Installing Network Tools,Inspecting Network Services & Firewall,Configuring Firewall Rules,",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCO9FM2b2egQqB5bzIkKAtqAXQepj4rcRL992YfswJWqfI?e=fDiCYX",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQAjboY_05N2QrQa6XbZCIOSAYDDqF-NUp7DVr6Gm2naIaA?e=m4fPQX",
     githubLink: "https://github.com/nmap/nmap",
     imageId:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=150&fit=crop",
