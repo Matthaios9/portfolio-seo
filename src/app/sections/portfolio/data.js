@@ -105,7 +105,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDNTg3jls1ZQrJvV-LdZXDjAfFfpZORpuFCv94wUfbTUC0?e=5YbbFQ",
     githubLink: "https://github.com/LoicVeirman/HardenAD",
     imageId:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&h=150&fit=crop", // Infrastructure / Enterprise Servers
+      "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?w=300&h=150&fit=crop", // Infrastructure / Enterprise Servers
     createdAt: "2024-01-15T13:45:09.758Z",
   },
   {
@@ -129,7 +129,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQAjboY_05N2QrQa6XbZCIOSAYDDqF-NUp7DVr6Gm2naIaA?e=m4fPQX",
     githubLink: "https://github.com/nmap/nmap",
     imageId:
-      "https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?w=300&h=150&fit=crop", // Cybersecurity Code / Terminal
+      "https://images.unsplash.com/photo-1658232212757-9ddbb370f675?w=300&h=150&fit=crop", // Cybersecurity Code / Terminal
     createdAt: "2024-01-15T13:45:09.758Z",
   },
   {
@@ -141,7 +141,7 @@ const data = [
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBfqAt6tytoRa1gxPfW_eMrAXIv0y9an2GX5atQMI0COlc?e=qneAWP",
     githubLink: "https://github.com/Netgate/pfsense-api",
     imageId:
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=300&h=150&fit=crop", // Router / Firewall Hardware
+      "https://images.unsplash.com/photo-1680691257251-5fead813b73e?w=300&h=150&fit=crop", // Router / Firewall Hardware
     createdAt: "2024-01-15T13:45:09.758Z",
   },
 
