@@ -113,7 +113,7 @@ const data = [
     title: "Linux Os Hardening",
     category: "Cybersecurity",
     description:
-      "security audit and system hardening scan on an Ubuntu Linux system using the Lynis auditing tool, Lynis evaluates system parameters including boot settings, kernel configuration, user accounts, file systems, networking, SSH security, and active services, Displays the final audit results, highlighting suggestions for hardening security (e.g., SSH configuration tweaks, banner notices, auditing settings) alongside a calculated Hardening Index score (57).",
+      "security audit and system hardening scan on an Ubuntu Linux system using the Lynis auditing tool, Lynis evaluates system parameters including boot settings, kernel configuration, user accounts, file systems, networking, SSH security, and active services, Displays the final audit results",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCO9FM2b2egQqB5bzIkKAtqAXQepj4rcRL992YfswJWqfI?e=fDiCYX",
     githubLink: "https://github.com/jbarcia/Lynis",
     imageId:
