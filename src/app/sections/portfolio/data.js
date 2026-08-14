@@ -147,7 +147,7 @@ const data = [
 
   // --- ORIGINAL SOFTWARE DEV PROJECTS ---
   {
-    id: 10,
+    id: 13,
     title: "Movie Explorer",
     category: "Frontend",
     description:
@@ -159,7 +159,7 @@ const data = [
     createdAt: "2024-01-15T13:45:09.758Z",
   },
   {
-    id: 11,
+    id: 14,
     title: "Hotel Nirvana",
     category: "Fullstack",
     description:
@@ -171,7 +171,7 @@ const data = [
     createdAt: "2024-01-15T13:46:58.058Z",
   },
   {
-    id: 12,
+    id: 15,
     title: "Whatsapp Clone",
     category: "Fullstack",
     description:
@@ -183,7 +183,7 @@ const data = [
     createdAt: "2024-01-15T13:48:47.597Z",
   },
   {
-    id: 13,
+    id: 16,
     title: "Pig-Dice Game",
     category: "Frontend",
     description:
@@ -195,7 +195,7 @@ const data = [
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
-    id: 14,
+    id: 17,
     title: "React Meals",
     category: "Frontend",
     description:
@@ -207,7 +207,7 @@ const data = [
     createdAt: "2024-01-16T05:41:58.435Z",
   },
   {
-    id: 15,
+    id: 18,
     title: "Fresh Coffee Website",
     category: "Frontend",
     description:
@@ -219,7 +219,7 @@ const data = [
     createdAt: "2024-01-16T05:43:44.397Z",
   },
   {
-    id: 16,
+    id: 19,
     title: "Travel Time",
     category: "Frontend",
     description:
@@ -231,7 +231,7 @@ const data = [
     createdAt: "2024-01-16T05:46:04.660Z",
   },
   {
-    id: 17,
+    id: 20,
     title: "Iphone 14 Animation",
     category: "Frontend",
     description:
@@ -243,7 +243,7 @@ const data = [
     createdAt: "2024-01-16T05:47:27.444Z",
   },
   {
-    id: 18,
+    id: 21,
     title: "Fancy Interactive Card",
     category: "Frontend",
     description:
@@ -255,7 +255,7 @@ const data = [
     createdAt: "2024-01-16T05:50:55.752Z",
   },
   {
-    id: 19,
+    id: 22,
     title: "Discover Website",
     category: "Frontend",
     description:
@@ -267,7 +267,7 @@ const data = [
     createdAt: "2024-01-16T05:53:52.137Z",
   },
   {
-    id: 20,
+    id: 23,
     title: "Nexter",
     category: "Frontend",
     description:
@@ -279,7 +279,7 @@ const data = [
     createdAt: "2024-01-16T05:56:44.845Z",
   },
   {
-    id: 21,
+    id: 24,
     title: "Natours",
     category: "Frontend",
     description:
@@ -291,7 +291,7 @@ const data = [
     createdAt: "2024-01-16T06:00:03.226Z",
   },
   {
-    id: 22,
+    id: 25,
     title: "Guess Number",
     category: "Frontend",
     description:
@@ -303,7 +303,7 @@ const data = [
     createdAt: "2024-01-16T06:18:01.164Z",
   },
   {
-    id: 23,
+    id: 26,
     title: "Cargo Game",
     category: "Fullstack",
     description:
