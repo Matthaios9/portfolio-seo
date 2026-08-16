@@ -62,12 +62,12 @@ const data = [
   },
   {
     id: 6,
-    title: "SOC Lab",
+    title: "Network Scanner with Scapy",
     category: "Cybersecurity",
     description:
-      "deploying an end-to-end open-source SIEM security monitoring infrastructure. Highlights step-by-step setup including Elasticsearch engine, Filebeat data collection pipeline, Kibana interface integration, Wazuh Manager platform, and cross-platform Wazuh Agent deployments on Ubuntu Server and Windows endpoints.",
+      "installed deps, verified Scapy, then run ICMP, TCP, and ARP scans against own VM/gateway (safe, self-owned targets since VirtualBox NAT only exposes own and the gateway)",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQD5EkkDzu7qTZ8grikRarokATkb7f8cZ8z0qNtr5zdr8dU?e=8KCKCQ",
-    githubLink: "https://github.com/wazuh/wazuh",
+    githubLink: "https://github.com/0xShun/Network-Scanner",
     imageId:
       "https://images.unsplash.com/photo-1751448555253-f39c06e29d82?w=300&h=150&fit=crop", // Monitoring dashboards / Terminal
     createdAt: "2024-01-16T05:32:18.173Z",
