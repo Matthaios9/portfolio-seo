@@ -29,7 +29,7 @@ const data = [
     title: "Memory Forensics and investigation",
     category: "Cybersecurity",
     description:
-      "Executed memory forensic analysis on a raw memory dump (`Challenge.raw`) using Volatility Framework 2.6. Identified OS profile (`Win7SP1x86`), performed process enumeration (`pslist`),used use the cmdscan plugin,used the consoles plugin 
+      "Executed memory forensic analysis on a raw memory dump (`Challenge.raw`) using Volatility Framework 2.6, Identified OS profile (`Win7SP1x86`), performed process enumeration (`pslist`),used use the cmdscan plugin,used the consoles plugin", 
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCxjbQRCKLxRZ4_3fJOVXBfAbMFbdhqiAr3gUJ2NEJ78mg?e=3cFIOO",
     githubLink: "https://github.com/volatilityfoundation/volatility",
     imageId:
