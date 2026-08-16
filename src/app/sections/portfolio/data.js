@@ -49,7 +49,7 @@ const data = [
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
-    id: 5,
+    id: 8,
     title: "Threat Hunting with Zeek",
     category: "Cybersecurity",
     description:
@@ -85,13 +85,13 @@ const data = [
     createdAt: "2024-01-16T05:32:18.173Z",
   },
   {
-    id: 8,
+    id: 5,
     title: "Network Traffic Analysis",
     category: "Cybersecurity",
     description:
-      "Hands-on packet capture analysis using Wireshark to inspect network activity, including DNS queries, ICMP ping requests, SMB2 file operations, and RDP remote desktop connections.",
+      "Packet capture analysis using Wireshark to inspect network activity, capture a packet that contains an encrypted username and password,find the packet with the information we just sent. Once we have located it, check out that string of text next to the “Authorization: Basic” part of the HTTP GET message ",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQC0Al5d5cl-T4_-xut9vOEnARTcZ5IksIfLE4li8j9Q3XE?e=HALdab",
-    githubLink: "https://github.com/Lovedipsingh/Wireshark-Network-Analysis-Lab",
+    githubLink: "https://github.com/ToofastTurnip/Wireshark-Lab",
     imageId:
       "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=300&h=150&fit=crop", // Fiber optics / Data packets
     createdAt: "2024-01-16T05:32:18.173Z",
