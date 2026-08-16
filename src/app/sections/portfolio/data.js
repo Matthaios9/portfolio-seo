@@ -29,9 +29,9 @@ const data = [
     title: "Memory Forensics and investigation",
     category: "Cybersecurity",
     description:
-      "Executed memory forensic analysis on a raw memory dump (`exercise1.raw`) using Volatility Framework 2.5. Identified OS profile (`Win7SP1x64`), performed process enumeration (`pslist`), analyzed active TCP/UDP network connections (`netscan`), and ran process anomaly detection (`psxview`) to uncover hidden or unlinked malicious processes during incident triage.",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBrGY5QPvLoSpS5dPJa5FlzAd0MP0rxOETr0vivfWr0ao4?e=VHEZDO",
-    githubLink: "https://github.com/volatilityfoundation/volatility3",
+      "Executed memory forensic analysis on a raw memory dump (`Challenge.raw`) using Volatility Framework 2.6. Identified OS profile (`Win7SP1x86`), performed process enumeration (`pslist`),used use the cmdscan plugin,used the consoles plugin 
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCxjbQRCKLxRZ4_3fJOVXBfAbMFbdhqiAr3gUJ2NEJ78mg?e=3cFIOO",
+    githubLink: "https://github.com/volatilityfoundation/volatility",
     imageId:
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=150&fit=crop", // Binary / Digital matrix
     createdAt: "2024-01-16T05:32:18.173Z",
