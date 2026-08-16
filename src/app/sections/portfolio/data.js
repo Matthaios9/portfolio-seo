@@ -41,9 +41,9 @@ const data = [
     title: "Vulnerability Assessment with ZAP API",
     category: "Cybersecurity",
     description:
-      "running OWASP ZAP 2.15.0 on Kali Linux. Executed automated web crawling, active vulnerability scanning, and live traffic interception using HUD proxy against a target web application.",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBF36DHBKZfQIznNWdxM1KtAZtvEI3flpisq_oodxKjTyY?e=ydhHs9",
-    githubLink: "https://github.com/zaproxy/zap-extensions",
+      "Installing docker in kali,run website on top of docker,running OWASP ZAP on Kali Linux, configure browser proxy, import zap certificate, and live traffic interception using proxy against a target web application.",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDw8hSecv7XSJiDSKXxlbHmAdiDo0yPUx1AmcvleX9f2NM?e=FnoF20",
+    githubLink: "https://github.com/topics/owasp-juice-shop",
     imageId:
       "https://images.unsplash.com/photo-1618060932014-4deda4932554?w=300&h=150&fit=crop", // Shield / Cyber defense
     createdAt: "2024-01-16T05:32:18.173Z",
