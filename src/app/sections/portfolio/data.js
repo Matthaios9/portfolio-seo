@@ -122,12 +122,12 @@ const data = [
   },
   {
     id: 11,
-    title: "Linux Network Security Lab",
+    title: "Malware Analysis",
     category: "Cybersecurity",
     description:
-      "Linux system administration and security testing across two terminal sessions (a host/server terminal at the top and a client terminal at the bottom),Installing Network Tools,Inspecting Network Services & Firewall,Configuring Firewall Rules,",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQAjboY_05N2QrQa6XbZCIOSAYDDqF-NUp7DVr6Gm2naIaA?e=m4fPQX",
-    githubLink: "https://github.com/nmap/nmap",
+      "Get the EICAR test file which is a standardized 68-byte text string that all antivirus vendors flag as 'malware' for testing purposes,Basic triage: file type and hashing,Run strings analysis",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCXIzDXy8R7SIqPQDixZA2gAW644lhLtO-62KdUsWc33XQ?e=DhVgcp",
+    githubLink: "https://github.com/alos-source/EICAR-TEST-FILES",
     imageId:
       "https://images.unsplash.com/photo-1658232212757-9ddbb370f675?w=300&h=150&fit=crop", // Cybersecurity Code / Terminal
     createdAt: "2024-01-15T13:45:09.758Z",
