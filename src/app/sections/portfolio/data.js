@@ -62,11 +62,11 @@ const data = [
   },
   {
     id: 6,
-    title: "Network Scanner with Scapy",
+    title: "Network Scanning with Scapy",
     category: "Cybersecurity",
     description:
       "installed deps, verified Scapy, then run ICMP, TCP, and ARP scans against own VM/gateway (safe, self-owned targets since VirtualBox NAT only exposes own and the gateway)",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQD5EkkDzu7qTZ8grikRarokATkb7f8cZ8z0qNtr5zdr8dU?e=8KCKCQ",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQB4oh6Msr3aR425tAE8YGgvAcyIJZasIXoyNuJN4ou5XhI?e=8X10UW",
     githubLink: "https://github.com/0xShun/Network-Scanner",
     imageId:
       "https://images.unsplash.com/photo-1751448555253-f39c06e29d82?w=300&h=150&fit=crop", // Monitoring dashboards / Terminal
@@ -90,7 +90,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Packet capture analysis using Wireshark to inspect network activity, capture a packet that contains an encrypted username and password,find the packet with the information we just sent. Once we have located it, check out that string of text next to the “Authorization: Basic” part of the HTTP GET message ",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQC0Al5d5cl-T4_-xut9vOEnARTcZ5IksIfLE4li8j9Q3XE?e=HALdab",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCIpdP3owD0QZg52_EP0tAfATt8YYaJiI9RAvR1st0Bntw?e=GrLF6o",
     githubLink: "https://github.com/ToofastTurnip/Wireshark-Lab",
     imageId:
       "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=300&h=150&fit=crop", // Fiber optics / Data packets
