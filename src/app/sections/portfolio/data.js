@@ -102,7 +102,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "Create the VM in VirtualBox,Set networking and resources,attach ISO,Install AD DS and promote to Domain Controller,Harden password and account lockout policy",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDNTg3jls1ZQrJvV-LdZXDjAfFfpZORpuFCv94wUfbTUC0?e=5YbbFQ",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDNTg3jls1ZQrJvV-LdZXDjAfFfpZORpuFCv94wUfbTUC0?e=xLaAxZ",
     githubLink: "",
     imageId:
       "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?w=300&h=150&fit=crop", // Infrastructure / Enterprise Servers
