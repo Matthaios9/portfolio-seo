@@ -101,9 +101,9 @@ const data = [
     title: "Active Directory GPO Hardening",
     category: "Cybersecurity",
     description:
-      "Configuring the Default Domain Controllers Policy,LDAP server signing requirements,Refuse password changes for machine accounts,LAN Manager authentication level and Applying and Verifying Policy Updates",
+      "Create the VM in VirtualBox,Set networking and resources,attach ISO,Install AD DS and promote to Domain Controller,Harden password and account lockout policy",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQDNTg3jls1ZQrJvV-LdZXDjAfFfpZORpuFCv94wUfbTUC0?e=5YbbFQ",
-    githubLink: "https://github.com/LoicVeirman/HardenAD",
+    githubLink: "",
     imageId:
       "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?w=300&h=150&fit=crop", // Infrastructure / Enterprise Servers
     createdAt: "2024-01-15T13:45:09.758Z",
