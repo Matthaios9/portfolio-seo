@@ -110,12 +110,12 @@ const data = [
   },
   {
     id: 10,
-    title: "Linux Os Hardening",
+    title: "DNS Lab",
     category: "Cybersecurity",
     description:
-      "security audit and system hardening scan on an Ubuntu Linux system using the Lynis auditing tool, Lynis evaluates system parameters including boot settings, kernel configuration, user accounts, file systems, networking, SSH security, and active services, Displays the final audit results",
+      "DNS role is installed,Review the existing forward lookup zone,Create an A record,Create a CNAME record,Set up a reverse lookup zone,Verify resolution with nslookup",
     projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCO9FM2b2egQqB5bzIkKAtqAXQepj4rcRL992YfswJWqfI?e=fDiCYX",
-    githubLink: "https://github.com/jbarcia/Lynis",
+    githubLink: "https://github.com/Manojkumar1310-cyber/Windows-server-2019-lab",
     imageId:
       "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=300&h=150&fit=crop", // Linux Terminal / CLI
     createdAt: "2024-01-15T13:45:09.758Z",
