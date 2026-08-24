@@ -102,7 +102,7 @@ const data = [
     category: "Cybersecurity",
     description:
       "DNS role is installed,Review the existing forward lookup zone,Create an A record,Create a CNAME record,Set up a reverse lookup zone,Verify resolution with nslookup",
-    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQCO9FM2b2egQqB5bzIkKAtqAXQepj4rcRL992YfswJWqfI?e=fDiCYX",
+    projectLink: "https://1drv.ms/v/c/8ba7733f57b4cf84/IQBU_BrO-DU6QKuE0J9M1DUkATrDGyTMt7SY3-RFxXYCus4?e=zngaE8",
     githubLink: "https://github.com/Manojkumar1310-cyber/Windows-server-2019-lab",
     imageId:
       "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=300&h=150&fit=crop", // Linux Terminal / CLI
